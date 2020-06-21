@@ -2,6 +2,7 @@ const tabletojson = require('tabletojson').Tabletojson
 
 const getCharacter = require('../../../src/libs/getCharacter')
 const basicUser = require('../../stubs/basicUser.json')
+const complexUser = require('../../stubs/complexUser.json')
 
 jest.mock('tabletojson')
 
@@ -20,5 +21,14 @@ describe('getCharacter', () => {
     expect(user.characterInfo.residence).toBe('Thais')
     expect(user.characterInfo.lastLogin).toBe('Aug 26 2012, 07:34:49 CEST')
     expect(user.characterInfo.accountStatus).toBe('Free Account')
+  })
+
+  describe('get extra info', () => {
+    it('get achievements', async () => {
+      tabletojson.convertUrl.mockResolvedValue(complexUser)
+
+      const user = await getCharacter('Momzo')
+      expect(user.achievements).toStrictEqual(['Demonbane', 'High Inquisitor', 'Life on the Streets', 'Warlock'])
+    })
   })
 })
