@@ -1,0 +1,21 @@
+[
+  [
+    { "0": "Character Information" },
+    { "0": "Name:", "1": "User" },
+    { "0": "Title:", "1": "None (0 titles unlocked)" },
+    { "0": "Sex:", "1": "male" },
+    { "0": "Vocation:", "1": "Druid" },
+    { "0": "Level:", "1": "24" },
+    { "0": "Achievement Points:", "1": "0" },
+    { "0": "World:", "1": "Quintera" },
+    { "0": "Residence:", "1": "Thais" },
+    { "0": "Last Login:", "1": "Aug 26 2012, 07:34:49 CEST" },
+    { "0": "Account Status:", "1": "Free Account" }
+  ],
+  [
+    { "0": "Account Achievements" },
+    {
+      "0": "There are no achievements set to be displayed for this character."
+    }
+  ]
+]

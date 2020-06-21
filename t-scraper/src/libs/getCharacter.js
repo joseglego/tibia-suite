@@ -13,12 +13,24 @@ const getCharacterInfo = (tableInfo) => {
   }, {})
 }
 
+const getAchievements = (tableInfo) => {
+  const achievementsArray = tableInfo
+    .find(array => array[0][0] === 'Account Achievements')
+
+  if (!achievementsArray || achievementsArray[1][0] === 'There are no achievements set to be displayed for this character.') {
+    return []
+  }
+
+  return achievementsArray.slice(1, achievementsArray.length).map((achievement) => achievement[1])
+}
+
 const getCharacter = async (name) => {
   const url = `https://www.tibia.com/community/?subtopic=characters&name=${name}`
   const tableInfo = await tabletojson.convertUrl(url)
   const characterInfo = getCharacterInfo(tableInfo)
+  const achievements = getAchievements(tableInfo)
 
-  return { characterInfo }
+  return { characterInfo, achievements }
 }
 
 module.exports = getCharacter
