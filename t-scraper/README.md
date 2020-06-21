@@ -61,6 +61,13 @@ The main idea was get Inforamtion about characters. But, right now I'm working i
     location,
     pvpType,
     additionalInfo,
+  }],
+  tournamentWorlds: [{
+    world,
+    online,
+    location,
+    pvpType,
+    additionalInfo,
   }]
 }
 ```

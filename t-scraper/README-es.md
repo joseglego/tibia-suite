@@ -61,6 +61,13 @@ La idea era obtener información de los Personajes. Sin embargo, estoy trabajand
     location,
     pvpType,
     additionalInfo,
+  }],
+  tournamentWorlds: [{
+    world,
+    online,
+    location,
+    pvpType,
+    additionalInfo,
   }]
 }
 ```
