@@ -40,5 +40,15 @@ describe('getCharacter', () => {
         description: 'Slain at Level 478 by Elder Nexid, Rookie Legend, Zdechly Slon, Elder Piatek, Zwariowany Peker, Dran Yunel, Mentalnaaa Paskudaaa and Apoloribad Tarashaja.'
       }])
     })
+
+    it('get account info', async () => {
+      tabletojson.convertUrl.mockResolvedValue(complexUser)
+      const user = await getCharacter('Momzo')
+
+      expect(user.accountInfo).toStrictEqual({
+        loyaltyTitle: 'Squire of Tibia',
+        created: 'Oct 04 2014, 09:49:11 CEST'
+      })
+    })
   })
 })
