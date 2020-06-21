@@ -1,6 +1,16 @@
 const tabletojson = require('tabletojson').Tabletojson
 const camelize = require('../utils/camelize')
 
+const getArrayInfo = (tableInfo, title) => {
+  const array = tableInfo.find(array => array[0][0] === title)
+
+  if (!array) {
+    return []
+  }
+
+  return array.slice(1, array.length)
+}
+
 const getCharacterInfo = (tableInfo) => {
   const characterInfoArray = tableInfo[0].slice(1, tableInfo[0].length)
 
@@ -14,14 +24,15 @@ const getCharacterInfo = (tableInfo) => {
 }
 
 const getAchievements = (tableInfo) => {
-  const achievementsArray = tableInfo
-    .find(array => array[0][0] === 'Account Achievements')
+  const achievementsTitle = 'Account Achievements'
+  const achievementsEmpty = 'There are no achievements set to be displayed for this character.'
+  const achievementsArray = getArrayInfo(tableInfo, achievementsTitle)
 
-  if (!achievementsArray || achievementsArray[1][0] === 'There are no achievements set to be displayed for this character.') {
+  if (achievementsArray.length === 0 || achievementsArray[0][0] === achievementsEmpty) {
     return []
   }
 
-  return achievementsArray.slice(1, achievementsArray.length).map((achievement) => achievement[1])
+  return achievementsArray.map((achievement) => achievement[1])
 }
 
 const getCharacter = async (name) => {
