@@ -50,5 +50,19 @@ describe('getCharacter', () => {
         created: 'Oct 04 2014, 09:49:11 CEST'
       })
     })
+
+    it('get characters', async () => {
+      tabletojson.convertUrl.mockResolvedValue(complexUser)
+      const user = await getCharacter('Momzo')
+
+      expect(user.characters).toStrictEqual([
+        { name: '1. Pochedero', world: 'Estela' },
+        { name: '2. Poduszka', world: 'Peloria' },
+        { name: '3. Skyvex', world: 'Estela' },
+        { name: '4. Thaz boi', world: 'Tournament - restricted Store' },
+        { name: '5. Thaz The Reincarnated', world: 'Peloria' },
+        { name: '6. Zdechly Slon', world: 'Antica' }
+      ])
+    })
   })
 })
