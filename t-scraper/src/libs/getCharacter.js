@@ -51,6 +51,25 @@ const getAccountInfo = (tableInfo) => {
   return accountInfoArray.reduce(translateJson, {})
 }
 
+const getCharacters = (tableInfo) => {
+  const charactersTitle = 'Characters'
+  const charactersArray = getArrayInfo(tableInfo, charactersTitle)
+
+  if (charactersArray.length === 0) {
+    return []
+  }
+
+  return charactersArray
+    .slice(1, charactersArray.length)
+    .reduce((characters, character) => {
+      if (character[0].length) {
+        characters.push({ name: character[0], world: character[1] })
+      }
+
+      return characters
+    }, [])
+}
+
 const getCharacter = async (name) => {
   const url = `https://www.tibia.com/community/?subtopic=characters&name=${name}`
   const tableInfo = await tabletojson.convertUrl(url)
@@ -59,8 +78,9 @@ const getCharacter = async (name) => {
   const achievements = getAchievements(tableInfo)
   const deaths = getDeaths(tableInfo)
   const accountInfo = getAccountInfo(tableInfo)
+  const characters = getCharacters(tableInfo)
 
-  return { characterInfo, achievements, deaths, accountInfo }
+  return { characterInfo, achievements, deaths, accountInfo, characters }
 }
 
 module.exports = getCharacter
