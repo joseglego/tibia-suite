@@ -1,26 +1,26 @@
 # T-Scrapper
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-- [Español](./README-es.md)
+- [English](./README.md)
 
 ## Idea
-This is a JavaScript lib which works as a webscraper to get information from [Tibia](https://www.tibia.com/news/?subtopic=latestnews)
+Es una pequeña librería de JavaScript que funciona como WebScraper para obtener información de la página Oficial de [Tibia](https://www.tibia.com/news/?subtopic=latestnews)
 
-The main idea was get Inforamtion about characters. But, right now I'm working in more elements.
+La idea era obtener información de los Personajes. Sin embargo, estoy trabajando en más elementos.
 
-## Use
-### Install
+## Uso
+### Instalación
 - `npm run install`
 
-### Use
+### Uso
 - `npm run start`
 
 ### Lints & Tests
 - `npm run lint`
 - `npm run test`
 
-## Features
+## Funcionalidades
 ### getCharacter
-- `getCharacter`: Receive user name.
+- `getCharacter`: Recibe el nombre del Personaje.
 ```js
 {
   characterInfo: {
