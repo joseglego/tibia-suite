@@ -1,5 +1,6 @@
 const getCharacter = require('./libs/getCharacter')
 const getWorlds = require('./libs/getWorlds')
+const getWorld = require('./libs/getWorld')
 
 const testGetCharacter = async () => {
   const characterNames = ['Jnoumis', 'Momzo', 'Zdechly Slon']
@@ -15,9 +16,14 @@ const testGetWorlds = async () => {
   console.log(worlds)
 }
 
+const testGetWorld = async () => {
+  const world = await getWorld('Antica')
+  console.log(world)
+}
 const run = async () => {
   await testGetCharacter()
   await testGetWorlds()
+  await testGetWorld()
 }
 
 run()
