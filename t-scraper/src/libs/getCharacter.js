@@ -35,13 +35,22 @@ const getAchievements = (tableInfo) => {
   return achievementsArray.map((achievement) => achievement[1])
 }
 
+const getDeaths = (tableInfo) => {
+  const deathsTitle = 'Character Deaths'
+  const deathsArray = getArrayInfo(tableInfo, deathsTitle)
+
+  return deathsArray.map((death) => ({ date: death[0], description: death[1] }))
+}
+
 const getCharacter = async (name) => {
   const url = `https://www.tibia.com/community/?subtopic=characters&name=${name}`
   const tableInfo = await tabletojson.convertUrl(url)
+
   const characterInfo = getCharacterInfo(tableInfo)
   const achievements = getAchievements(tableInfo)
+  const deaths = getDeaths(tableInfo)
 
-  return { characterInfo, achievements }
+  return { characterInfo, achievements, deaths }
 }
 
 module.exports = getCharacter

@@ -26,9 +26,19 @@ describe('getCharacter', () => {
   describe('get extra info', () => {
     it('get achievements', async () => {
       tabletojson.convertUrl.mockResolvedValue(complexUser)
-
       const user = await getCharacter('Momzo')
+
       expect(user.achievements).toStrictEqual(['Demonbane', 'High Inquisitor', 'Life on the Streets', 'Warlock'])
+    })
+
+    it('get deaths', async () => {
+      tabletojson.convertUrl.mockResolvedValue(complexUser)
+      const user = await getCharacter('Momzo')
+
+      expect(user.deaths).toStrictEqual([{
+        date: 'Jun 03 2020, 12:35:37 CEST',
+        description: 'Slain at Level 478 by Elder Nexid, Rookie Legend, Zdechly Slon, Elder Piatek, Zwariowany Peker, Dran Yunel, Mentalnaaa Paskudaaa and Apoloribad Tarashaja.'
+      }])
     })
   })
 })
