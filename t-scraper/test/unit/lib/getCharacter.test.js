@@ -11,16 +11,18 @@ describe('getCharacter', () => {
     tabletojson.convertUrl.mockResolvedValue(basicUser)
 
     const user = await getCharacter('User')
-    expect(user.characterInfo.name).toBe('User')
-    expect(user.characterInfo.title).toBe('None (0 titles unlocked)')
-    expect(user.characterInfo.sex).toBe('male')
-    expect(user.characterInfo.vocation).toBe('Druid')
-    expect(user.characterInfo.level).toBe('24')
-    expect(user.characterInfo.achievementPoints).toBe('0')
-    expect(user.characterInfo.world).toBe('Quintera')
-    expect(user.characterInfo.residence).toBe('Thais')
-    expect(user.characterInfo.lastLogin).toBe('Aug 26 2012, 07:34:49 CEST')
-    expect(user.characterInfo.accountStatus).toBe('Free Account')
+    expect(user.characterInfo).toStrictEqual({
+      name: 'User',
+      title: 'None (0 titles unlocked)',
+      sex: 'male',
+      vocation: 'Druid',
+      level: '24',
+      achievementPoints: '0',
+      world: 'Quintera',
+      residence: 'Thais',
+      lastLogin: 'Aug 26 2012, 07:34:49 CEST',
+      accountStatus: 'Free Account'
+    })
   })
 
   describe('get extra info', () => {
