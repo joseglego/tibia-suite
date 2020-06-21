@@ -11,16 +11,18 @@ const getArrayInfo = (tableInfo, title) => {
   return array.slice(1, array.length)
 }
 
+const translateJson = (acc, json) => {
+  const keyName = camelize(json[0].substring(0, json[0].length - 1))
+  const value = json[1]
+  acc[`${keyName}`] = value
+
+  return acc
+}
+
 const getCharacterInfo = (tableInfo) => {
   const characterInfoArray = tableInfo[0].slice(1, tableInfo[0].length)
 
-  return characterInfoArray.reduce((characterInfo, row) => {
-    const keyName = camelize(row[0].substring(0, row[0].length - 1))
-    const value = row[1]
-    characterInfo[`${keyName}`] = value
-
-    return characterInfo
-  }, {})
+  return characterInfoArray.reduce(translateJson, {})
 }
 
 const getAchievements = (tableInfo) => {
