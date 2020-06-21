@@ -20,7 +20,7 @@ The main idea was get Inforamtion about characters. But, right now I'm working i
 
 ## Features
 ### getCharacter
-- `getCharacter`: Receive user name.
+- `getCharacter(characterName)`:
 ```js
 {
   characterInfo: {
@@ -68,6 +68,29 @@ The main idea was get Inforamtion about characters. But, right now I'm working i
     location,
     pvpType,
     additionalInfo,
+  }]
+}
+```
+
+### getWorld
+- `getWorld(worldName)`:
+```js
+{
+  worldInfo: {
+    status,
+    playersOnline,
+    onlineRecord,
+    creationDate,
+    location,
+    pvPType,
+    worldQuestTitles,
+    battlEyeStatus,
+    gameWorldType
+  },
+  onlineCharacters: [{
+    name,
+    level,
+    vocation
   }]
 }
 ```
