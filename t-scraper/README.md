@@ -50,3 +50,17 @@ The main idea was get Inforamtion about characters. But, right now I'm working i
   }]
 }
 ```
+
+### getWorlds
+- `getWorlds`:
+```js
+{
+  worlds: [{
+    world,
+    online,
+    location,
+    pvpType,
+    additionalInfo,
+  }]
+}
+```

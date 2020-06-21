@@ -50,3 +50,17 @@ La idea era obtener información de los Personajes. Sin embargo, estoy trabajand
   }]
 }
 ```
+
+### getWorlds
+- `getWorlds`:
+```js
+{
+  worlds: [{
+    world,
+    online,
+    location,
+    pvpType,
+    additionalInfo,
+  }]
+}
+```
