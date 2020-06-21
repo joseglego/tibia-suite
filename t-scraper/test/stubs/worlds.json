@@ -1,0 +1,59 @@
+[
+  [{ }],
+  [{ }],
+  [{ "0": "Overall Maximum:   64,028 players (on Jan 02 2007, 19:20:30 CET)"}],
+  [{ "0": "Regular Worlds" }],
+  [
+    {
+      "0": "World",
+      "1": "Online",
+      "2": "Location",
+      "3": "PvP Type",
+      "4": "BattlEye",
+      "5": "Additional Information"
+    },
+    {
+      "0": "Antica",
+      "1": "826",
+      "2": "Europe",
+      "3": "Open PvP",
+      "4": "",
+      "5": ""
+    },
+    {
+      "0": "Assombra",
+      "1": "88",
+      "2": "South America",
+      "3": "Retro Hardcore PvP",
+      "4": "",
+      "5": ""
+    },
+    {
+      "0": "Astera",
+      "1": "342",
+      "2": "North America",
+      "3": "Optional PvP",
+      "4": "",
+      "5": ""
+    }
+  ],
+  [{ "0": "Tournament Worlds" }],
+  [
+    {
+      "0": "World",
+      "1": "Online",
+      "2": "Location",
+      "3": "PvP Type",
+      "4": "BattlEye",
+      "5": "Additional Information"
+    },
+    {
+      "0": "Endebra",
+      "1": "-",
+      "2": "South America",
+      "3": "Open PvP",
+      "4": "",
+      "5": "premium, blocked, restricted Store products"
+    }
+  ]
+]
