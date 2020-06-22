@@ -94,3 +94,24 @@ La idea era obtener información de los Personajes. Sin embargo, estoy trabajand
   }]
 }
 ```
+
+### getGuild
+- `getGuild(guildName)`:
+```js
+{
+  guildInfo: 'Gildia PVP. Organizujemy tez teamhunty i questy dla czlonkow gildi. Teamspeak wymagany. W sprawie dolaczenia skontaktuj sie z ktoryms z liderow.\nThe guild was founded on Antica on Feb 13 2018.\nIt is currently active.\nGuild is opened for applications.',
+  members: [{
+    joined,
+    level,
+    name,
+    nick,
+    rank,
+    status,
+    vocation,
+  }],
+  invitations: [{
+    name,
+    invitationDate,
+  }]
+}
+```
