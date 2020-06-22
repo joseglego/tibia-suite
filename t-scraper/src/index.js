@@ -1,6 +1,7 @@
 const getCharacter = require('./libs/getCharacter')
 const getWorlds = require('./libs/getWorlds')
 const getWorld = require('./libs/getWorld')
+const getGuild = require('./libs/getGuild')
 
 const testGetCharacter = async () => {
   const characterNames = ['Jnoumis', 'Momzo', 'Zdechly Slon']
@@ -20,10 +21,17 @@ const testGetWorld = async () => {
   const world = await getWorld('Antica')
   console.log(world)
 }
+
+const testGetGuild = async () => {
+  const guild = await getGuild('Elysium')
+  console.log(guild)
+}
+
 const run = async () => {
   await testGetCharacter()
   await testGetWorlds()
   await testGetWorld()
+  await testGetGuild()
 }
 
 run()
