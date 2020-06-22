@@ -115,3 +115,17 @@ The main idea was get Inforamtion about characters. But, right now I'm working i
   }]
 }
 ```
+
+### getGuilds
+- `getGuilds(worldName)`:
+```js
+{
+  guilds: [
+    {
+      image,
+      name,
+      description
+    }
+  ]
+}
+```

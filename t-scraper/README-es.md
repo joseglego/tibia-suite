@@ -115,3 +115,17 @@ La idea era obtener información de los Personajes. Sin embargo, estoy trabajand
   }]
 }
 ```
+
+### getGuilds
+- `getGuilds(worldName)`:
+```js
+{
+  guilds: [
+    {
+      image,
+      name,
+      description
+    }
+  ]
+}
+```
