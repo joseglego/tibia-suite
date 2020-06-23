@@ -1,8 +1,8 @@
-const getCharacter = require('./libs/getCharacter')
-const getWorlds = require('./libs/getWorlds')
-const getWorld = require('./libs/getWorld')
-const getGuilds = require('./libs/getGuilds')
-const getGuild = require('./libs/getGuild')
+const getCharacter = require('./lib/getCharacter')
+const getWorlds = require('./lib/getWorlds')
+const getWorld = require('./lib/getWorld')
+const getGuilds = require('./lib/getGuilds')
+const getGuild = require('./lib/getGuild')
 
 const testGetCharacter = async () => {
   const characterNames = ['Jnoumis', 'Momzo', 'Zdechly Slon']

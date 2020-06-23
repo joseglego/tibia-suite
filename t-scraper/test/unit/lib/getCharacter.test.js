@@ -1,6 +1,6 @@
 const tabletojson = require('tabletojson').Tabletojson
 
-const getCharacter = require('../../../src/libs/getCharacter')
+const getCharacter = require('../../../src/lib/getCharacter')
 const basicUser = require('../../stubs/basicUser.json')
 const complexUser = require('../../stubs/complexUser.json')
 

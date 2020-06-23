@@ -1,6 +1,6 @@
 const tabletojson = require('tabletojson').Tabletojson
 
-const getWorlds = require('../../../src/libs/getWorlds')
+const getWorlds = require('../../../src/lib/getWorlds')
 const worldsMock = require('../../stubs/worlds.json')
 const worldsWithoutTournamentMock = require('../../stubs/worldsWithoutTournament.json')
 jest.mock('tabletojson')
