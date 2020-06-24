@@ -1,4 +1,4 @@
-# T-suite
+# tibia-suite
 - [Español](README-es.md)
 
 ## Idea
@@ -6,10 +6,10 @@ This project is a wide project based on [Tibia](https://www.tibia.com/news/?subt
 
 The main idea is build a general system based on simple components to explain step by step all the work related (FrontEnd, BackEnd, CLI, External & Internal Apps, Web Technologies).
 
-I haven't play during last years. So, if you think I'm missing something or I should include something else feel free to open an [Issue](https://github.com/joseglego/T-suite/issues/new)
+I haven't play during last years. So, if you think I'm missing something or I should include something else feel free to open an [Issue](https://github.com/joseglego/tibia-suite/issues/new)
 
 ## Components
-- [T-Scraper](./t-scraper/README.md)
+- [Scraper](./scraper/README.md)
 - To be announced.
 
 ## Extra Information

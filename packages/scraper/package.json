@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joseglego/T-suite/t-scraper"
+    "url": "https://github.com/joseglego/tibia-suite/scraper"
   },
-  "bugs": "https://github.com/joseglego/T-suite/issues",
+  "bugs": "https://github.com/joseglego/tibia-suite/issues",
   "files": [
     "LICENSE.txt",
     "src/lib",

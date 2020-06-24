@@ -1,4 +1,4 @@
-# T-suite
+# tibia-suite
 - [English](./README.md)
 
 ## Idea
@@ -6,10 +6,10 @@ Este proyecto es un extenso proyecto basado en [Tibia](https://www.tibia.com/new
 
 La idea principal es crear un sistema general basado en distintos componentes sencillos para explicar paso a paso toro el trabajo relacionado (FrontEnd, BackEnd, CLI, Interacción con Apps internas y externas, Tecnologías Webs).
 
-No he jugado en los últimos años. Así que, si te parece que se me escapa algo o que debería agregar algo, sientente en la libertad de crear un [Issue](https://github.com/joseglego/T-suite/issues/new)
+No he jugado en los últimos años. Así que, si te parece que se me escapa algo o que debería agregar algo, sientente en la libertad de crear un [Issue](https://github.com/joseglego/tibia-suite/issues/new)
 
 ## Componentes
-- [T-Scraper](./t-scraper/README-es.md)
+- [Scraper](./scraper/README-es.md)
 - Aún por anunciar.
 
 ## Información Adicional
