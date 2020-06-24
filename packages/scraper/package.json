@@ -1,6 +1,6 @@
 {
-  "name": "t-scraper",
-  "version": "1.0.0",
+  "name": "@tibia-suite/scraper",
+  "version": "0.0.0",
   "description": "A helper to get information from tibia.com to check up to date information.",
   "main": "index.js",
   "keywords": [
@@ -44,5 +44,8 @@
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^26.0.1",
     "standard": "^14.3.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
