@@ -1,17 +1,36 @@
 {
   "name": "t-scraper",
   "version": "1.0.0",
-  "description": "",
+  "description": "A helper to get information from tibia.com to check up to date information.",
   "main": "index.js",
+  "keywords": [
+    "mmorpg",
+    "tibia",
+    "characters",
+    "worlds",
+    "guilds"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Jose Lezama Gonzalez",
+    "url": "http://joseglego.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joseglego/T-suite/t-scraper"
+  },
+  "bugs": "https://github.com/joseglego/T-suite/issues",
+  "files": [
+    "LICENSE.txt",
+    "src/lib",
+    "index.js"
+  ],
   "scripts": {
     "lint": "eslint src test/unit",
     "start": "node src/index.js",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "tabletojson": "^2.0.4"
   },
