@@ -7,16 +7,35 @@ Es una pequeña librería de JavaScript que funciona como WebScraper para obtene
 
 La idea era obtener información de los Personajes. Sin embargo, estoy trabajando en más elementos.
 
+## Instalación
+```sh
+npm install --save @tibia-suite/scraper
+```
+
 ## Uso
-### Instalación
-- `npm run install`
+### Importar por funcionalidad
+```sh
+const { getCharacter } = require('@tibia-suite/scraper')
 
-### Uso
-- `npm run start`
+getCharacter('Character Name').then((character) => {
+  //
+})
+```
 
-### Lints & Tests
-- `npm run lint`
-- `npm run test`
+### Importar paquete completo
+```sh
+const tibia-scraper = require('@tibia-suite/scraper')
+
+tibia-scraper.getCharacter('Character Name').then((character) => {
+  //
+})
+```
+
+## Lints & Tests
+```sh
+npm run lint
+npm run test
+```
 
 ## Funcionalidades
 ### getCharacter

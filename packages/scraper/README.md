@@ -7,16 +7,35 @@ This is a JavaScript lib which works as a webscraper to get information from [Ti
 
 The main idea was get Inforamtion about characters. But, right now I'm working in more elements.
 
-## Use
-### Install
-- `npm run install`
+## Install
+```sh
+npm install --save @tibia-suite/scraper
+```
 
-### Use
-- `npm run start`
+## Usage
+### By Feature
+```sh
+const { getCharacter } = require('@tibia-suite/scraper')
 
-### Lints & Tests
-- `npm run lint`
-- `npm run test`
+getCharacter('Character Name').then((character) => {
+  //
+})
+```
+
+### Whole Package
+```sh
+const tibia-scraper = require('@tibia-suite/scraper')
+
+tibia-scraper.getCharacter('Character Name').then((character) => {
+  //
+})
+```
+
+## Lints & Tests
+```sh
+npm run lint
+npm run test
+```
 
 ## Features
 ### getCharacter
