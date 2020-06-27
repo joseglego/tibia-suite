@@ -22,7 +22,7 @@
   "bugs": "https://github.com/joseglego/tibia-suite/issues",
   "files": [
     "LICENSE.txt",
-    "src/lib",
+    "src",
     "index.js"
   ],
   "scripts": {
