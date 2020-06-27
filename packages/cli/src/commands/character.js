@@ -1,4 +1,5 @@
 const { Command, flags } = require('@oclif/command')
+const { CLIError } = require('@oclif/errors')
 
 const { getCharacter } = require('@tibia-suite/scraper')
 
@@ -6,6 +7,10 @@ class CharacterCommand extends Command {
   async run () {
     const { flags } = this.parse(CharacterCommand)
     const name = flags.name
+
+    if (!name) {
+      throw new CLIError('name is required to get information')
+    }
 
     const character = await getCharacter(name)
     this.log(character)
