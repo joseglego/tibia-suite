@@ -28,26 +28,41 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`@tibia-suite/cli hello`](#tibia-suitecli-hello)
+* [`@tibia-suite/cli character`](#tibia-suitecli-character)
+* [`@tibia-suite/cli guild`](#tibia-suitecli-guild)
 * [`@tibia-suite/cli help [COMMAND]`](#tibia-suitecli-help-command)
+* [`@tibia-suite/cli updater`](#tibia-suitecli-updater)
 
-## `@tibia-suite/cli hello`
+## `@tibia-suite/cli character`
 
-Describe the command here
+Get the information from the character at tibia.com
 
 ```
 USAGE
-  $ @tibia-suite/cli hello
+  $ @tibia-suite/cli character
 
 OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
+  -m, --minified   show only character info without extend data
+  -n, --name=name  name character to get data
 ```
 
-_See code: [src/commands/hello.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/hello.js)_
+_See code: [src/commands/character.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/character.js)_
+
+## `@tibia-suite/cli guild`
+
+Get the information from the guild at tibia.com
+
+```
+USAGE
+  $ @tibia-suite/cli guild
+
+OPTIONS
+  -l, --level      show member list sorted by level
+  -n, --name=name  name guild to get data
+  -o, --online     only show online members in the list
+```
+
+_See code: [src/commands/guild.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/guild.js)_
 
 ## `@tibia-suite/cli help [COMMAND]`
 
@@ -65,4 +80,22 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
+
+## `@tibia-suite/cli updater`
+
+Describe the command here
+
+```
+USAGE
+  $ @tibia-suite/cli updater
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/updater.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/updater.js)_
 <!-- commandsstop -->
