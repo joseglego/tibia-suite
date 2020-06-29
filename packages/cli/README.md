@@ -30,8 +30,8 @@ USAGE
 <!-- commands -->
 * [`@tibia-suite/cli character`](#tibia-suitecli-character)
 * [`@tibia-suite/cli guild`](#tibia-suitecli-guild)
+* [`@tibia-suite/cli worlds`](#tibia-suitecli-worlds)
 * [`@tibia-suite/cli help [COMMAND]`](#tibia-suitecli-help-command)
-* [`@tibia-suite/cli updater`](#tibia-suitecli-updater)
 
 ## `@tibia-suite/cli character`
 
@@ -64,6 +64,21 @@ OPTIONS
 
 _See code: [src/commands/guild.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/guild.js)_
 
+## `@tibia-suite/cli worlds`
+
+Get the list of worlds from tibia.com
+
+```
+USAGE
+  $ @tibia-suite/cli worlds
+
+OPTIONS
+  -l, --location=eu|na|sa  filter by location
+  -o, --online             order by amounf of online characters
+```
+
+_See code: [src/commands/worlds.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/worlds.js)_
+
 ## `@tibia-suite/cli help [COMMAND]`
 
 display help for @tibia-suite/cli
@@ -80,22 +95,4 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
-
-## `@tibia-suite/cli updater`
-
-Describe the command here
-
-```
-USAGE
-  $ @tibia-suite/cli updater
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/updater.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/updater.js)_
 <!-- commandsstop -->
