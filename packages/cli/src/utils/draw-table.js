@@ -1,4 +1,4 @@
-const Table = require('cli-table')
+const Table = require('cli-table3')
 
 const drawTable = (title, ...info) => {
   const headerLine = [title]
