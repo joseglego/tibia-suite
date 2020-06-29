@@ -30,8 +30,9 @@ USAGE
 <!-- commands -->
 * [`@tibia-suite/cli character`](#tibia-suitecli-character)
 * [`@tibia-suite/cli guild`](#tibia-suitecli-guild)
-* [`@tibia-suite/cli worlds`](#tibia-suitecli-worlds)
+* [`@tibia-suite/cli guilds`](#tibia-suitecli-guilds)
 * [`@tibia-suite/cli help [COMMAND]`](#tibia-suitecli-help-command)
+* [`@tibia-suite/cli worlds`](#tibia-suitecli-worlds)
 
 ## `@tibia-suite/cli character`
 
@@ -64,20 +65,21 @@ OPTIONS
 
 _See code: [src/commands/guild.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/guild.js)_
 
-## `@tibia-suite/cli worlds`
+## `@tibia-suite/cli guilds`
 
-Get the list of worlds from tibia.com
+List the guilds of a world
 
 ```
 USAGE
-  $ @tibia-suite/cli worlds
+  $ @tibia-suite/cli guilds
 
 OPTIONS
-  -l, --location=eu|na|sa  filter by location
-  -o, --online             order by amounf of online characters
+  -f, --filter=filter  find by (part of the) name
+  -i, --insensitive    find is insensitive
+  -s, --server=server  (required) server where the guilds are
 ```
 
-_See code: [src/commands/worlds.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/worlds.js)_
+_See code: [src/commands/guilds.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/guilds.js)_
 
 ## `@tibia-suite/cli help [COMMAND]`
 
@@ -95,4 +97,19 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
+
+## `@tibia-suite/cli worlds`
+
+Get the list of worlds from tibia.com
+
+```
+USAGE
+  $ @tibia-suite/cli worlds
+
+OPTIONS
+  -l, --location=eu|na|sa  filter by location
+  -o, --online             order by amounf of online characters
+```
+
+_See code: [src/commands/worlds.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/worlds.js)_
 <!-- commandsstop -->
