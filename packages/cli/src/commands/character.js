@@ -2,7 +2,7 @@ const { Command, flags } = require('@oclif/command')
 const { CLIError } = require('@oclif/errors')
 const { cli } = require('cli-ux')
 
-const { getCharacter } = require('@tibia-suite/scraper')
+const scraper = require('@tibia-suite/scraper')
 
 const jsonToTable = require('../utils/json-to-table')
 const drawTable = require('../utils/draw-table')
@@ -17,7 +17,7 @@ class CharacterCommand extends Command {
     }
 
     cli.action.start('starting a process')
-    const character = await getCharacter(name)
+    const character = await scraper.getCharacter(name)
     cli.action.stop()
 
     drawTable('Character Information', ...jsonToTable(character.characterInfo))

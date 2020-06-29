@@ -1,0 +1,33 @@
+{
+  "characterInfo": {
+    "name": "Abdosz",
+    "formerNames": "Styles tank",
+    "title": "None (12 titles unlocked)",
+    "sex": "male",
+    "vocation": "Royal Paladin",
+    "level": "401",
+    "achievementPoints": "168",
+    "world": "Antica",
+    "residence": "Thais",
+    "lastLogin": "Jun 29 2020, 01:03:40 CEST",
+    "accountStatus": "Premium Account"
+  },
+  "achievements": [
+    "Bibby's Bloodbath",
+    "Rocket in Pocket"
+  ],
+  "deaths": [
+    { "date": "Jun 26 2020, 09:23:10 CEST", "description": "Died at Level 398 by a frazzlemaw." },
+    { "date": "Jun 25 2020, 23:58:42 CEST", "description": "Died at Level 398 by a falcon paladin." },
+    { "date": "Jun 25 2020, 23:17:25 CEST", "description": "Died at Level 398 by a soul-broken harbinger." }
+  ],
+  "accountInfo": {
+    "loyaltyTitle": "Warden of Tibia",
+    "created": "Feb 22 2018, 15:55:36 CET"
+  },
+  "characters": [
+    { "name": "1. Abdosz", "world": "Antica" },
+    { "name": "2. Abo Sliman", "world": "Antica" },
+    { "name": "3. Abo Soleman", "world": "Antica" }
+  ]
+}
