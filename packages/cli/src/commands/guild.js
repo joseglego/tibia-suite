@@ -9,7 +9,7 @@ const drawTable = require('../utils/draw-table')
 class GuildCommand extends Command {
   async run () {
     const { flags } = this.parse(GuildCommand)
-    const { name, online, sorted } = flags
+    const { name, online, level } = flags
 
     if (!name) {
       throw new CLIError('name is required to get information')
@@ -26,7 +26,7 @@ class GuildCommand extends Command {
       members = onlineMembers
     }
 
-    if (sorted) {
+    if (level) {
       members = members.sort((member1, member2) => member2.level - member1.level)
     }
 
