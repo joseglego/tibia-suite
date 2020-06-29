@@ -2,7 +2,7 @@ const { Command, flags } = require('@oclif/command')
 const { CLIError } = require('@oclif/errors')
 const { cli } = require('cli-ux')
 
-const { getGuild } = require('@tibia-suite/scraper')
+const scraper = require('@tibia-suite/scraper')
 
 const drawTable = require('../utils/draw-table')
 
@@ -16,7 +16,7 @@ class GuildCommand extends Command {
     }
 
     cli.action.start('starting a process')
-    const guild = await getGuild(name)
+    const guild = await scraper.getGuild(name)
     const onlineMembers = guild.members.filter(member => member.status === 'online')
     let membersToShow = guild.members.length !== onlineMembers.length ? `${onlineMembers.length} online / ` : ''
     let members = guild.members

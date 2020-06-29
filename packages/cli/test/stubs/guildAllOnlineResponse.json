@@ -1,0 +1,33 @@
+{
+  "guildInfo": "The guild was founded on Antica on Apr 03 2020.\nIt is currently active.\nGuild is closed for applications.\nTheir home on Antica is Sky Lane, Guild 3. The rent is paid until Jul 11 2020.",
+  "members": [
+    {
+      "rank": "Combo Leader",
+      "name": "Zalds Dayer",
+      "nick": "Cool Nick",
+      "vocation": "Master Sorcerer",
+      "level": 270,
+      "joined": "Apr 03 2020",
+      "status": "online"
+    },
+    {
+      "rank": "Vice Leader",
+      "name": "Ambarasador",
+      "nick": null,
+      "vocation": "Master Sorcerer",
+      "level": 247,
+      "joined": "Apr 09 2020",
+      "status": "online"
+    },
+    {
+      "rank": "Bomber",
+      "name": "Aspirant Seedseey",
+      "nick": null,
+      "vocation": "Royal Paladin",
+      "level": 444,
+      "joined": "Jun 10 2020",
+      "status": "online"
+    }
+  ],
+  "invitations": [ { "name": "Awesome Alvin", "invitationDate": "Jun 28 2020" } ]
+}
