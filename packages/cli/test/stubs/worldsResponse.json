@@ -1,0 +1,48 @@
+{
+  "worlds": [
+    {
+      "world": "Antica",
+      "online": 746,
+      "location": "Europe",
+      "pvpType": "Open PvP",
+      "additionalInfo": "premium"
+    },
+    {
+      "world": "Assombra",
+      "online": 118,
+      "location": "South America",
+      "pvpType": "Retro Hardcore PvP",
+      "additionalInfo": ""
+    },
+    {
+      "world": "Astera",
+      "online": 365,
+      "location": "North America",
+      "pvpType": "Optional PvP",
+      "additionalInfo": "premium, blocked"
+    }
+  ],
+  "tournamentWorlds": [
+    {
+      "world": "Endebra",
+      "online": 0,
+      "location": "South America",
+      "pvpType": "Open PvP",
+      "additionalInfo": "premium, blocked, restricted Store products"
+    },
+    {
+      "world": "Endera",
+      "online": 0,
+      "location": "North America",
+      "pvpType": "Open PvP",
+      "additionalInfo": "premium, blocked, restricted Store products"
+    },
+    {
+      "world": "Endura",
+      "online": 0,
+      "location": "Europe",
+      "pvpType": "Open PvP",
+      "additionalInfo": "premium, blocked, restricted Store products"
+    }
+  ]
+}

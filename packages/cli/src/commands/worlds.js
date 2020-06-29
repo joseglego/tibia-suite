@@ -24,10 +24,9 @@ class WorldsCommand extends Command {
     if (flags.location) {
       const location = LOCATIONS[flags.location]
       worlds = worlds.filter(world => world.location === location)
-      worldsToShow = totalWorlds !== worlds.length ? `${worlds.length} / ${totalWorlds}` : totalWorlds
+      worldsToShow = `${worlds.length} / ${totalWorlds}`
       tournamentWorlds = tournamentWorlds.filter(world => world.location === location)
-      tournamentWorldsToShow = totalTournalmentWorlds !== tournamentWorlds.length
-        ? `${tournamentWorlds.length} / ${totalTournalmentWorlds}` : totalTournalmentWorlds
+      tournamentWorldsToShow = `${tournamentWorlds.length} / ${totalTournalmentWorlds}`
     }
 
     if (flags.online) {
