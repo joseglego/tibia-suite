@@ -31,7 +31,7 @@ class GuildCommand extends Command {
     }
 
     members = members.map(member => [
-      member.joined, member.label || '', member.name, member.level, member.status, member.vocation
+      member.rank, member.name, member.nick || '', member.vocation, member.level, member.joined, member.status
     ])
 
     cli.action.stop()
