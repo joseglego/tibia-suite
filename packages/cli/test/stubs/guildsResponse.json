@@ -1,0 +1,29 @@
+{
+  "guilds": [
+    {
+      "image": "https://static.tibia.com/images/guildlogos/Airglow.gif width=\"64\" height=\"64\"",
+      "name": "Airglow",
+      "description": "Gildia PVP. Organizujemy tez teamhunty i questy dla czlonkow gildi. Teamspeak wymagany. W sprawie dolaczenia skontaktuj sie z ktoryms z liderow."
+    },
+    {
+      "image": "https://static.tibia.com/images/guildlogos/Alanui_Institute.gif width=\"64\" height=\"64\"",
+      "name": "Alanui Institute",
+      "description": "Founded in 2018, The Alanui Institute mobilizes resources and tools for ideas and actions that transform Tibia. The institute work with leaders and social organizations and a global network of supporters to promote equality, social justice and opportunity in form of art for all players. It has classes in literature, acting, painting, sculpture, music, interiors and flowers design. It also work with various services on behalf of the community. The headquarters is on Harbour Street in Thais."
+    },
+    {
+      "image": "https://static.tibia.com/images/guildlogos/Almans.gif width=\"64\" height=\"64\"",
+      "name": "Almans",
+      "description": "Komm, Junge, lach mit."
+    },
+    {
+      "image": "https://static.tibia.com/images/guildlogos/Arroz_com_feijao.gif width=\"64\" height=\"64\"",
+      "name": "Arroz com feijao",
+      "description": "Arroz com feij&#xFFFD;o &#xFFFD; um prato muito popular na Am&#xFFFD;rica Latina, no Caribe e nas comunidades latinas, sefarditas e caribenhas de outros pa&#xFFFD;ses. Devido &#xFFFD; natureza b&#xFFFD;sica de seus ingredientes, existem receitas de pratos em muitas partes do mundo."
+    },
+    {
+      "image": "https://static.tibia.com/images/community/default_logo.gif width=\"64\" height=\"64\"",
+      "name": "House of Salinos",
+      "description": "We are descendants of Ferion who founded the House of Salinos in the reign of Tibianus I. We proudly carry his family traditions forward, setting the family and its household first, thereby servicing the Tibian society and it's better values. For the Family; by bonds of Honor and Valor"
+    }
+  ]
+}
