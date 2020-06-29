@@ -36,7 +36,7 @@ class GuildCommand extends Command {
 
     cli.action.stop()
     drawTable('Guild Info', [guild.guildInfo])
-    drawTable(`Member (${membersToShow})`, ...members)
+    drawTable(`Members (${membersToShow})`, ...members)
     drawTable('Invitations', ...guild.invitations.map(invitation => [invitation.name, invitation.invitationDate]))
   }
 }
