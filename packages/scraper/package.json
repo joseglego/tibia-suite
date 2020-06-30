@@ -1,6 +1,6 @@
 {
   "name": "@tibia-suite/scraper",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A helper to get information from tibia.com to check up to date information.",
   "main": "index.js",
   "keywords": [
@@ -47,5 +47,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "b19cf63c55640b7f0ead6d790b63f021264a31db"
 }
