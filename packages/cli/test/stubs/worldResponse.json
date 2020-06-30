@@ -1,0 +1,23 @@
+{
+  "worldInfo": {
+    "status": "Online",
+    "playersOnline": "35",
+    "onlineRecord": "433 players (on Apr 16 2019, 21:10:30 CEST)",
+    "creationDate": "04/19",
+    "location": "Europe",
+    "pvPType": "Open PvP",
+    "transferType": "blocked",
+    "worldQuestTitles": "A Piece of Cake, The Colours of Magic, Bewitched",
+    "battlEyeStatus": "Protected by BattlEye since its release.",
+    "gameWorldType": "Regular"
+  },
+  "onlineCharacters": [
+    { "name": "Agaeszi Bellumadus", "level": 168, "vocation": "Elder Druid" },
+    { "name": "Behike The Alchemist", "level": 220, "vocation": "Master Sorcerer" },
+    { "name": "Dariel Damus", "level": 8, "vocation": "None" },
+    { "name": "Gualajara", "level": 55, "vocation": "Royal Paladin" },
+    { "name": "Potezny Kotojelen", "level": 125, "vocation": "Elite Knight" },
+    { "name": "Skan Bugan", "level": 28, "vocation": "Knight" },
+    { "name": "Super Shooter", "level": 131, "vocation": "Royal Paladin" }
+  ]
+}
