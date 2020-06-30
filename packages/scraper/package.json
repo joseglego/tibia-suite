@@ -8,7 +8,8 @@
     "tibia",
     "characters",
     "worlds",
-    "guilds"
+    "guilds",
+    "lib"
   ],
   "license": "MIT",
   "author": {

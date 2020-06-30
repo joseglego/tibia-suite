@@ -44,6 +44,11 @@
   ],
   "homepage": "https://github.com/joseglego/tibia-suite",
   "keywords": [
+    "mmorpg",
+    "tibia",
+    "characters",
+    "worlds",
+    "guilds",
     "oclif"
   ],
   "license": "MIT",
