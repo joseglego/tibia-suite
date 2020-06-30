@@ -32,6 +32,7 @@ USAGE
 * [`@tibia-suite/cli guild`](#tibia-suitecli-guild)
 * [`@tibia-suite/cli guilds`](#tibia-suitecli-guilds)
 * [`@tibia-suite/cli help [COMMAND]`](#tibia-suitecli-help-command)
+* [`@tibia-suite/cli world`](#tibia-suitecli-world)
 * [`@tibia-suite/cli worlds`](#tibia-suitecli-worlds)
 
 ## `@tibia-suite/cli character`
@@ -97,6 +98,26 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
+
+## `@tibia-suite/cli world`
+
+Describe the command here
+
+```
+USAGE
+  $ @tibia-suite/cli world
+
+OPTIONS
+  -l, --level      sort online characters by level
+  -n, --name=name  name of the selected world
+  -v, --vocation   group online characters by vocation
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/world.js](https://github.com/joseglego/tibia-suite/blob/v0.0.0/src/commands/world.js)_
 
 ## `@tibia-suite/cli worlds`
 
