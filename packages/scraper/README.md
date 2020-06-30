@@ -1,6 +1,11 @@
-# Scrapper
+@tibia-suite/scraper
+================
+
+A Lib to get infromation from tibia.com in your application directly from official webpage.
+
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-- [Español](./README-es.md)
+[![Version](https://img.shields.io/npm/v/@tibia-suite/scraper.svg)](https://npmjs.org/package/@tibia-suite/scraper)
+[![License](https://img.shields.io/npm/l/@tibia-suite/scraper.svg)](https://github.com/joseglego/tibia-suite/blob/master/package.json)
 
 ## Idea
 This is a JavaScript lib which works as a webscraper to get information from [Tibia](https://www.tibia.com/news/?subtopic=latestnews)
@@ -118,7 +123,7 @@ npm run test
 - `getGuild(guildName)`:
 ```js
 {
-  guildInfo: 'Gildia PVP. Organizujemy tez teamhunty i questy dla czlonkow gildi. Teamspeak wymagany. W sprawie dolaczenia skontaktuj sie z ktoryms z liderow.\nThe guild was founded on Antica on Feb 13 2018.\nIt is currently active.\nGuild is opened for applications.',
+  guildInfo
   members: [{
     joined,
     level,

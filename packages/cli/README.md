@@ -1,12 +1,11 @@
 @tibia-suite/cli
-================
 
-A CLI to get information from tibia.com in console
+A CLI to get information from tibia.com in your console directly from official webpage.
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![Version](https://img.shields.io/npm/v/@tibia-suite/cli.svg)](https://npmjs.org/package/@tibia-suite/cli)
-[![Downloads/week](https://img.shields.io/npm/dw/@tibia-suite/cli.svg)](https://npmjs.org/package/@tibia-suite/cli)
 [![License](https://img.shields.io/npm/l/@tibia-suite/cli.svg)](https://github.com/joseglego/tibia-suite/blob/master/package.json)
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 
 <!-- toc -->
 * [Usage](#usage)
