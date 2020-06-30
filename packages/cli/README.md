@@ -19,7 +19,7 @@ $ npm install -g @tibia-suite/cli
 $ @tibia-suite/cli COMMAND
 running command...
 $ @tibia-suite/cli (-v|--version|version)
-@tibia-suite/cli/0.1.0 darwin-x64 node-v14.3.0
+@tibia-suite/cli/0.1.1 darwin-x64 node-v14.3.0
 $ @tibia-suite/cli --help [COMMAND]
 USAGE
   $ @tibia-suite/cli COMMAND
@@ -48,7 +48,7 @@ OPTIONS
   -n, --name=name  name character to get data
 ```
 
-_See code: [src/commands/character.js](https://github.com/joseglego/tibia-suite/blob/v0.1.0/src/commands/character.js)_
+_See code: [src/commands/character.js](https://github.com/joseglego/tibia-suite/blob/v0.1.1/src/commands/character.js)_
 
 ## `@tibia-suite/cli guild`
 
@@ -64,7 +64,7 @@ OPTIONS
   -o, --online     only show online members in the list
 ```
 
-_See code: [src/commands/guild.js](https://github.com/joseglego/tibia-suite/blob/v0.1.0/src/commands/guild.js)_
+_See code: [src/commands/guild.js](https://github.com/joseglego/tibia-suite/blob/v0.1.1/src/commands/guild.js)_
 
 ## `@tibia-suite/cli guilds`
 
@@ -80,7 +80,7 @@ OPTIONS
   -s, --server=server  (required) server where the guilds are
 ```
 
-_See code: [src/commands/guilds.js](https://github.com/joseglego/tibia-suite/blob/v0.1.0/src/commands/guilds.js)_
+_See code: [src/commands/guilds.js](https://github.com/joseglego/tibia-suite/blob/v0.1.1/src/commands/guilds.js)_
 
 ## `@tibia-suite/cli help [COMMAND]`
 
@@ -117,7 +117,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/world.js](https://github.com/joseglego/tibia-suite/blob/v0.1.0/src/commands/world.js)_
+_See code: [src/commands/world.js](https://github.com/joseglego/tibia-suite/blob/v0.1.1/src/commands/world.js)_
 
 ## `@tibia-suite/cli worlds`
 
@@ -132,5 +132,5 @@ OPTIONS
   -o, --online             order by amounf of online characters
 ```
 
-_See code: [src/commands/worlds.js](https://github.com/joseglego/tibia-suite/blob/v0.1.0/src/commands/worlds.js)_
+_See code: [src/commands/worlds.js](https://github.com/joseglego/tibia-suite/blob/v0.1.1/src/commands/worlds.js)_
 <!-- commandsstop -->
