@@ -1,4 +1,5 @@
 # tibia-suite
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 ## Idea
 This project is a wide project based on [Tibia](https://www.tibia.com/news/?subtopic=latestnews), which is a MMORPG from [Cipsoft](https://www.cipsoft.com/index.php/en/)
