@@ -1,21 +1,30 @@
-const tabletojson = require('tabletojson').Tabletojson
+const cheerio = require('cheerio')
+const fetchHTML = require('../utils/fetchHTML')
 
-const translateWorld = (json) => ({
-  world: json[0],
-  online: json[1] !== '-' ? +json[1] : 0,
-  location: json[2],
-  pvpType: json[3],
-  additionalInfo: json[5]
-})
+const parseWorld = (htmlString) => {
+  const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
+
+  return ({
+    world: $('td:nth-of-type(1)').text(),
+    online: $('td:nth-of-type(2)').text() !== '-' ? +$('td:nth-of-type(2)').text() : 0,
+    location: $('td:nth-of-type(3)').text(),
+    pvpType: $('td:nth-of-type(4)').text(),
+    additionalInfo: $('td:nth-of-type(6)').text().trim()
+  })
+}
 
 const getWorlds = async () => {
-  const url = 'https://www.tibia.com/community/?subtopic=worlds'
-  const tableInfo = await tabletojson.convertUrl(url)
+  const body = await fetchHTML('https://www.tibia.com/community/?subtopic=worlds')
+  const $ = cheerio.load(body)
 
-  const worldsArray = tableInfo[4].slice(1, tableInfo[4].length)
-  const tournamentArray = tableInfo[6] ? tableInfo[6].slice(1, tableInfo[6].length) : []
-  const worlds = worldsArray.map(translateWorld)
-  const tournamentWorlds = tournamentArray.map(translateWorld)
+  const worlds = $('#worlds .TableContentContainer:nth-of-type(3)')
+    .find('tr.Odd,tr.Even')
+    .map((i, element) => parseWorld($(element).html())).get()
+
+  const tournamentWorlds = $('#worlds .TableContentContainer:nth-of-type(5)')
+    .find('tr.Odd,tr.Even')
+    .map((i, element) => parseWorld($(element).html())).get()
+
   return { worlds, tournamentWorlds }
 }
 

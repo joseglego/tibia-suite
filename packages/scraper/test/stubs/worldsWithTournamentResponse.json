@@ -1,0 +1,41 @@
+{
+  "worlds": [
+    {
+      "world": "Antica",
+      "online": 700,
+      "location": "Europe",
+      "pvpType": "Open PvP",
+      "additionalInfo": ""
+    },
+    {
+      "world": "Unica",
+      "online": 140,
+      "location": "Europe",
+      "pvpType": "Retro Open PvP",
+      "additionalInfo": "premium, blocked"
+    },
+    {
+      "world": "Venebra",
+      "online": 311,
+      "location": "South America",
+      "pvpType": "Optional PvP",
+      "additionalInfo": ""
+    }
+  ],
+  "tournamentWorlds": [
+    {
+      "world": "Endebra",
+      "online": 0,
+      "location": "South America",
+      "pvpType": "Open PvP",
+      "additionalInfo": "premium, blocked, restricted Store products"
+    },
+    {
+      "world": "Endera",
+      "online": 0,
+      "location": "North America",
+      "pvpType": "Open PvP",
+      "additionalInfo": "premium, blocked, restricted Store products"
+    }
+  ]
+}
