@@ -13,29 +13,29 @@ describe('getGuilds', () => {
     expect(guilds).toStrictEqual({
       active: [
         {
-          image: 'https://static.tibia.com/images/guildlogos/Airglow.gif',
+          logo: 'https://static.tibia.com/images/guildlogos/Airglow.gif',
           description: 'Gildia PVP. Organizujemy tez teamhunty i questy dla czlonkow gildi. Teamspeak wymagany. W sprawie dolaczenia skontaktuj sie z ktoryms z liderow.',
           name: 'Airglow'
         },
         {
-          image: 'https://static.tibia.com/images/guildlogos/Alanui_Institute.gif',
+          logo: 'https://static.tibia.com/images/guildlogos/Alanui_Institute.gif',
           description: 'Founded in 2018, The Alanui Institute mobilizes resources and tools for ideas and actions that transform Tibia. The institute work with leaders and social organizations and a global network of supporters to promote equality, social justice and opportunity in form of art for all players. It has classes in literature, acting, painting, sculpture, music, interiors and flowers design. It also work with various services on behalf of the community. The headquarters is on Harbour Street in Thais.',
           name: 'Alanui Institute'
         },
         {
-          image: 'https://static.tibia.com/images/guildlogos/Almans.gif',
+          logo: 'https://static.tibia.com/images/guildlogos/Almans.gif',
           description: 'Komm, Junge, lach mit.',
           name: 'Almans'
         }
       ],
       formation: [
         {
-          image: 'https://static.tibia.com/images/community/default_logo.gif',
+          logo: 'https://static.tibia.com/images/community/default_logo.gif',
           description: '',
           name: 'Anime'
         },
         {
-          image: 'https://static.tibia.com/images/community/default_logo.gif',
+          logo: 'https://static.tibia.com/images/community/default_logo.gif',
           description: '',
           name: 'Blood Line'
         }

@@ -7,7 +7,7 @@ const parseGuild = (htmlString) => {
 
   return ({
     description: $('td:nth-of-type(2)').text().slice(name.length),
-    image: $('td:nth-of-type(1) img').attr('src'),
+    logo: $('td:nth-of-type(1) img').attr('src'),
     name
   })
 }
