@@ -1,24 +1,27 @@
 {
   "worlds": [
     {
-      "world": "Antica",
+      "name": "Antica",
       "online": 700,
       "location": "Europe",
       "pvpType": "Open PvP",
+      "battleEye": "protected",
       "additionalInfo": ""
     },
     {
-      "world": "Unica",
+      "name": "Unica",
       "online": 140,
       "location": "Europe",
       "pvpType": "Retro Open PvP",
+      "battleEye": "",
       "additionalInfo": "premium, blocked"
     },
     {
-      "world": "Venebra",
+      "name": "Venebra",
       "online": 311,
       "location": "South America",
       "pvpType": "Optional PvP",
+      "battleEye": "initial",
       "additionalInfo": ""
     }
   ],
