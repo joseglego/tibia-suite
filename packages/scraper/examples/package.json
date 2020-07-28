@@ -1,0 +1,14 @@
+{
+  "name": "scraper-examples",
+  "version": "0.0.1",
+  "description": "examples for @tibia-suite/scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tibia-suite/scraper": "^0.1.6"
+  }
+}
