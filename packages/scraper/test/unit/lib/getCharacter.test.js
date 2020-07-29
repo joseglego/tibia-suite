@@ -1,70 +1,51 @@
-const tabletojson = require('tabletojson').Tabletojson
-
+const fetchHTML = require('../../../src/utils/fetchHTML')
 const getCharacter = require('../../../src/lib/getCharacter')
-const basicUser = require('../../stubs/basicUser.json')
-const complexUser = require('../../stubs/complexUser.json')
 
-jest.mock('tabletojson')
+const charBasicPage = require('../../stubs/charBasicPage')
+const charBasicResponse = require('../../stubs/charBasicResponse.json')
+const charComplexPage = require('../../stubs/charComplexPage')
+const charComplexResponse = require('../../stubs/charComplexResponse.json')
+
+jest.mock('../../../src/utils/fetchHTML')
 
 describe('getCharacter', () => {
   it('get basic character info', async () => {
-    tabletojson.convertUrl.mockResolvedValue(basicUser)
+    fetchHTML.mockResolvedValue(charBasicPage)
 
-    const user = await getCharacter('User')
-    expect(user.characterInfo).toStrictEqual({
-      name: 'User',
-      title: 'None (0 titles unlocked)',
-      sex: 'male',
-      vocation: 'Druid',
-      level: '24',
-      achievementPoints: '0',
-      world: 'Quintera',
-      residence: 'Thais',
-      lastLogin: 'Aug 26 2012, 07:34:49 CEST',
-      accountStatus: 'Free Account'
-    })
+    const char = await getCharacter('User')
+    expect(char.characterInfo).toStrictEqual(charBasicResponse.characterInfo)
+    expect(char.deaths).toBe(undefined)
+    expect(char.accountInfo).toBe(undefined)
+    expect(char.characters).toBe(undefined)
   })
 
   describe('get extra info', () => {
     it('get achievements', async () => {
-      tabletojson.convertUrl.mockResolvedValue(complexUser)
-      const user = await getCharacter('Momzo')
+      fetchHTML.mockResolvedValue(charComplexPage)
+      const char = await getCharacter('Momzo')
 
-      expect(user.achievements).toStrictEqual(['Demonbane', 'High Inquisitor', 'Life on the Streets', 'Warlock'])
+      expect(char.achievements).toStrictEqual(charComplexResponse.achievements)
     })
 
     it('get deaths', async () => {
-      tabletojson.convertUrl.mockResolvedValue(complexUser)
-      const user = await getCharacter('Momzo')
+      fetchHTML.mockResolvedValue(charComplexPage)
+      const char = await getCharacter('Momzo')
 
-      expect(user.deaths).toStrictEqual([{
-        date: 'Jun 03 2020, 12:35:37 CEST',
-        description: 'Slain at Level 478 by Elder Nexid, Rookie Legend, Zdechly Slon, Elder Piatek, Zwariowany Peker, Dran Yunel, Mentalnaaa Paskudaaa and Apoloribad Tarashaja.'
-      }])
+      expect(char.deaths).toStrictEqual(charComplexResponse.deaths)
     })
 
     it('get account info', async () => {
-      tabletojson.convertUrl.mockResolvedValue(complexUser)
-      const user = await getCharacter('Momzo')
+      fetchHTML.mockResolvedValue(charComplexPage)
+      const char = await getCharacter('Momzo')
 
-      expect(user.accountInfo).toStrictEqual({
-        loyaltyTitle: 'Squire of Tibia',
-        created: 'Oct 04 2014, 09:49:11 CEST'
-      })
+      expect(char.accountInfo).toStrictEqual(charComplexResponse.accountInfo)
     })
 
     it('get characters', async () => {
-      tabletojson.convertUrl.mockResolvedValue(complexUser)
-      const user = await getCharacter('Momzo')
+      fetchHTML.mockResolvedValue(charComplexPage)
+      const char = await getCharacter('Momzo')
 
-      expect(user.characters).toStrictEqual([
-        { name: '1. Pochedero', world: 'Estela' },
-        { name: '2. Poduszka', world: 'Peloria' },
-        { name: '3. Skyvex', world: 'Estela' },
-        { name: '4. Thaz boi', world: 'Tournament - restricted Store' },
-        { name: '5. Thaz The Reincarnated', world: 'Peloria' },
-        { name: '6. Zdechly Slon', world: 'Antica' }
-      ])
+      expect(char.characters).toStrictEqual(charComplexResponse.characters)
     })
   })
 })

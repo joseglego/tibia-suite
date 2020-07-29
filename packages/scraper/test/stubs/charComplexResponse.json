@@ -1,0 +1,46 @@
+{
+  "characterInfo": {
+    "name": "Kiing Excanor",
+    "title": "Legend of Magic (26 titles unlocked)",
+    "sex": "male",
+    "vocation": "Elder Druid",
+    "level": "1506",
+    "achievementPoints": "824",
+    "world": "Nefera",
+    "residence": "Carlin",
+    "house": "Upper Swamp Lane 12 (Thais) is paid until Aug 09 2020",
+    "guildMembership": "Top of the United Fighters",
+    "lastLogin": "Jul 29 2020, 11:51:59 CEST",
+    "comment": "Hail To The Kiing\n\nAlways be your self.\nLearn from your mistakes.\nAlways protect the ones you care.\nNever giveup. \n8/20/2018\n03:29 You advanced from Level 899 to Level 900. \n\n12/3/2018\n09:10 You advanced from Level 999 to Level 1000.\n\n9/2/2019\n11:23 You advanced from Level 1299 to Level 1300.\n7/192020\n21:28 You advanced from Level 1499 to Level 1500.",
+    "accountStatus": "Premium Account"
+  },
+  "achievements": [
+    "Alumni",
+    "Dread Lord",
+    "Marble Madness",
+    "Razing!",
+    "True Dedication"
+  ],
+  "deaths": [
+    {
+      "date": "Jul 05 2020, 06:38:34 CEST",
+      "description": "Died at Level 1489 by an energetic book."
+    }
+  ],
+  "accountInfo": {
+    "loyaltyTitle": "Keeper of Tibia",
+    "created": "Jul 24 2009, 21:08:29 CEST"
+  },
+  "characters": [
+    { "name": "Alanvriito", "world": "Gentebra" },
+    { "name": "Alanvrito", "world": "Nefera" },
+    { "name": "Alanvrito in secura", "world": "Nefera" },
+    { "name": "Eskkanor", "world": "Nefera" },
+    { "name": "Kiing Excanor", "world": "Nefera" },
+    { "name": "Kiing Excanorr", "world": "Tournament - regular" },
+    { "name": "Kiing Might", "world": "Tournament - restricted Store" },
+    { "name": "King Exc", "world": "Secura" },
+    { "name": "King Exckanor", "world": "Solidera" },
+    { "name": "Tio Excanor", "world": "Menera" }
+  ]
+}
