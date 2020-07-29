@@ -14,7 +14,7 @@ describe('getWorld', () => {
       .toStrictEqual({
         worldInfo: {
           status: 'Online',
-          playersOnline: '165',
+          playersOnline: 165,
           onlineRecord: '1,055 players (on May 01 2020, 17:58:30 CEST)',
           creationDate: '01/97',
           location: 'Europe',

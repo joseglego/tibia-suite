@@ -1,7 +1,8 @@
 const cheerio = require('cheerio')
 const camelize = require('./camelize')
 
-const getValue = (acc, keyName, value) => {
+const getValue = (acc, keyName, rawValue) => {
+  const value = isNaN(+rawValue) ? rawValue : +rawValue
   if (Object.keys(acc).includes(keyName)) {
     if (Array.isArray(acc[keyName])) {
       return [...acc[keyName], value]
