@@ -9,7 +9,10 @@ const parseAchievements = (htmlString) => {
   if ($('tr').eq(1).text() === achievementsEmpty) { return [] }
 
   return $('tr[bgcolor="#D4C0A1"], tr[bgcolor="#F1E0C6"]')
-    .map((_, element) => $(element).find('td:nth-of-type(2)').text().trim()).get()
+    .map((_, element) => ({
+      stars: $(element).find('td:nth-of-type(1)').children().length,
+      name: $(element).find('td:nth-of-type(2)').text().trim()
+    })).get()
 }
 
 const parseDeaths = (htmlString) => {

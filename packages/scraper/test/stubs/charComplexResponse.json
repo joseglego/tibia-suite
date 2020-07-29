@@ -19,11 +19,11 @@
     "accountStatus": "Premium Account"
   },
   "achievements": [
-    "Alumni",
-    "Dread Lord",
-    "Marble Madness",
-    "Razing!",
-    "True Dedication"
+    { "stars": 2, "name": "Alumni" },
+    { "stars": 3, "name": "Dread Lord" },
+    { "stars": 2, "name": "Marble Madness" },
+    { "stars": 3, "name": "Razing!" },
+    { "stars": 2, "name": "True Dedication" }
   ],
   "deaths": [
     {
