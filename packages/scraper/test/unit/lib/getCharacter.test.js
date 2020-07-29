@@ -20,6 +20,13 @@ describe('getCharacter', () => {
   })
 
   describe('get extra info', () => {
+    it('get detailed list of houses', async () => {
+      fetchHTML.mockResolvedValue(charComplexPage)
+      const char = await getCharacter('Momzo')
+
+      expect(char.characterInfo.house).toStrictEqual(charComplexResponse.characterInfo.house)
+    })
+
     it('get achievements', async () => {
       fetchHTML.mockResolvedValue(charComplexPage)
       const char = await getCharacter('Momzo')
