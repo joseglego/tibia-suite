@@ -31,6 +31,7 @@ const getGuild = async (name) => {
   const $ = cheerio.load(body)
   let rank
 
+  const logo = $('#guilds .BoxContent img').attr('src')
   const guildInfo = $('#GuildInformationContainer').text()
   const members = $('table.TableContent').eq(0)
     .find('tr[bgcolor=#F1E0C6], tr[bgcolor=#F1E0C6]')
@@ -44,7 +45,7 @@ const getGuild = async (name) => {
     .slice(1)
     .map((_, element) => parseInvitation($(element).html())).get()
 
-  return { guildInfo, members, invitations }
+  return { name, logo, guildInfo, members, invitations }
 }
 
 module.exports = getGuild

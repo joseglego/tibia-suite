@@ -10,7 +10,7 @@ describe('getGuild', () => {
   it('get guild list information', async () => {
     fetchHTML.mockResolvedValue(guildPage)
 
-    const guild = await getGuild('Mock Guild')
+    const guild = await getGuild('Gildia PVP')
     expect(guild)
       .toStrictEqual(guildResponse)
   })
