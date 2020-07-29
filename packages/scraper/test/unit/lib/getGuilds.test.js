@@ -11,6 +11,7 @@ describe('getGuilds', () => {
     const guilds = await getGuilds('Mock Guilds')
 
     expect(guilds).toStrictEqual({
+      world: 'Mock Guilds',
       active: [
         {
           logo: 'https://static.tibia.com/images/guildlogos/Airglow.gif',

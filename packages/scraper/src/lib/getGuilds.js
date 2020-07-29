@@ -26,7 +26,7 @@ const getGuilds = async (name) => {
     .slice(1)
     .map((i, element) => parseGuild($(element).html())).get()
 
-  return { active, formation }
+  return { world: name, active, formation }
 }
 
 module.exports = getGuilds
