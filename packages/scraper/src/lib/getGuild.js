@@ -32,7 +32,7 @@ const getGuild = async (name) => {
   let rank
 
   const logo = $('#guilds .BoxContent img').attr('src')
-  const guildInfo = $('#GuildInformationContainer').text()
+  const description = $('#GuildInformationContainer').text()
   const members = $('table.TableContent').eq(0)
     .find('tr[bgcolor=#F1E0C6], tr[bgcolor=#F1E0C6]')
     .map((_, element) => {
@@ -45,7 +45,16 @@ const getGuild = async (name) => {
     .slice(1)
     .map((_, element) => parseInvitation($(element).html())).get()
 
-  return { name, logo, guildInfo, members, invitations }
+  const guildInfo = {
+    name,
+    logo,
+    description,
+    totalMembers: members.length,
+    onlineMembers: members.filter(member => member.status === 'online').length,
+    offlineMembers: members.filter(member => member.status === 'offline').length
+  }
+
+  return { guildInfo, members, invitations }
 }
 
 module.exports = getGuild

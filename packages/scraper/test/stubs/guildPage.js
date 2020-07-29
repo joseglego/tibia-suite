@@ -708,27 +708,27 @@ $(document).ready(function() {
 <td>Elite Knight</td>
 <td>422</td>
 <td>Feb&nbsp;13&nbsp;2018</td>
-<td class="onlinestatus"><span class="red">offline</span></td></tr><tr bgcolor="#F1E0C6"><td>&nbsp;</td>
+<td class="onlinestatus"><span class="green">online</span></td></tr><tr bgcolor="#F1E0C6"><td>&nbsp;</td>
 <td><a href="https://www.tibia.com/community/?subtopic=characters&amp;name=Chinoleg+The+Druid">Chinoleg&nbsp;The&nbsp;Druid</a> (Siema Chinol)</td>
 <td>Elder Druid</td>
 <td>337</td>
 <td>Sep&nbsp;10&nbsp;2018</td>
-<td class="onlinestatus"><span class="red">offline</span></td></tr><tr bgcolor="#F1E0C6"><td>&nbsp;</td>
+<td class="onlinestatus"><span class="green">online</span></td></tr><tr bgcolor="#F1E0C6"><td>&nbsp;</td>
 <td><a href="https://www.tibia.com/community/?subtopic=characters&amp;name=Cutie+Mulan">Cutie&nbsp;Mulan</a></td>
 <td>Elder Druid</td>
 <td>364</td>
 <td>Jan&nbsp;08&nbsp;2019</td>
-<td class="onlinestatus"><span class="red">offline</span></td></tr><tr bgcolor="#F1E0C6"><td>&nbsp;</td>
+<td class="onlinestatus"><span class="green">online</span></td></tr><tr bgcolor="#F1E0C6"><td>&nbsp;</td>
 <td><a href="https://www.tibia.com/community/?subtopic=characters&amp;name=Kladi+Maley">Kladi&nbsp;Maley</a> (Szanuj Piwo)</td>
 <td>Elite Knight</td>
 <td>418</td>
 <td>Sep&nbsp;10&nbsp;2019</td>
-<td class="onlinestatus"><span class="red">offline</span></td></tr><tr bgcolor="#D4C0A1"><td>Retired</td>
+<td class="onlinestatus"><span class="green">online</span></td></tr><tr bgcolor="#D4C0A1"><td>Retigreen</td>
 <td><a href="https://www.tibia.com/community/?subtopic=characters&amp;name=Bersiu">Bersiu</a></td>
 <td>Royal Paladin</td>
 <td>393</td>
 <td>Sep&nbsp;16&nbsp;2019</td>
-<td class="onlinestatus"><span class="red">offline</span></td></tr><tr bgcolor="#D4C0A1"><td>&nbsp;</td>
+<td class="onlinestatus"><span class="red">online</span></td></tr><tr bgcolor="#D4C0A1"><td>&nbsp;</td>
 <td><a href="https://www.tibia.com/community/?subtopic=characters&amp;name=Imadris">Imadris</a></td>
 <td>Druid</td>
 <td>269</td>

@@ -1,7 +1,12 @@
 {
-  "name": "Gildia PVP",
-  "logo": "https://static.tibia.com/images/guildlogos/Airglow.gif",
-  "guildInfo": "Gildia PVP. Organizujemy tez teamhunty i questy dla czlonkow gildi. Teamspeak wymagany. W sprawie dolaczenia skontaktuj sie z ktoryms z liderow.\nThe guild was founded on Antica on Feb 13 2018.\nIt is currently active, but either has no leader, too few vice leaders, or less than 5 accounts with premium status in the ranks held by leader and vice leaders.\nGuild is opened for applications.\nIt will be disbanded on Aug 11 2020 if there are still less than four vice leaders or an insufficient amount of premium accounts in the leading ranks by then.\n",
+  "guildInfo": {
+    "name": "Gildia PVP",
+    "logo": "https://static.tibia.com/images/guildlogos/Airglow.gif",
+    "description": "Gildia PVP. Organizujemy tez teamhunty i questy dla czlonkow gildi. Teamspeak wymagany. W sprawie dolaczenia skontaktuj sie z ktoryms z liderow.\nThe guild was founded on Antica on Feb 13 2018.\nIt is currently active, but either has no leader, too few vice leaders, or less than 5 accounts with premium status in the ranks held by leader and vice leaders.\nGuild is opened for applications.\nIt will be disbanded on Aug 11 2020 if there are still less than four vice leaders or an insufficient amount of premium accounts in the leading ranks by then.\n",
+    "totalMembers": 16,
+    "onlineMembers": 4,
+    "offlineMembers": 12
+  },
   "members": [
     {
       "rank": "Supernova",
@@ -10,7 +15,7 @@
       "vocation": "Elite Knight",
       "level": 422,
       "joined": "Feb 13 2018",
-      "status": "offline"
+      "status": "online"
     },
     {
       "rank": "Supernova",
@@ -19,7 +24,7 @@
       "vocation": "Elder Druid",
       "level": 337,
       "joined": "Sep 10 2018",
-      "status": "offline"
+      "status": "online"
     },
     {
       "rank": "Supernova",
@@ -28,7 +33,7 @@
       "vocation": "Elder Druid",
       "level": 364,
       "joined": "Jan 08 2019",
-      "status": "offline"
+      "status": "online"
     },
     {
       "rank": "Supernova",
@@ -37,7 +42,7 @@
       "vocation": "Elite Knight",
       "level": 418,
       "joined": "Sep 10 2019",
-      "status": "offline"
+      "status": "online"
     },
     {
       "rank": "Lunch Break",
