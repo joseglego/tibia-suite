@@ -28,12 +28,12 @@ const parseCharacters = (htmlString) => {
 
   return $('tr[bgcolor="#D4C0A1"], tr[bgcolor="#F1E0C6"]')
     .slice(1)
-    .map((_, element) => {
-      return {
-        name: $(element).find('input[name="name"]').val(),
-        world: $(element).children('td:nth-of-type(2)').text().trim()
-      }
-    }).get()
+    .map((_, element) => ({
+      main: $(element).children('td:nth-of-type(1)').html().includes('account/maincharacter.png'),
+      name: $(element).find('input[name="name"]').val(),
+      status: $(element).children('td:nth-of-type(3) ').text() || 'offline',
+      world: $(element).children('td:nth-of-type(2)').text().trim()
+    })).get()
 }
 
 const getCharacter = async (name) => {

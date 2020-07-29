@@ -36,15 +36,15 @@
     "created": "Jul 24 2009, 21:08:29 CEST"
   },
   "characters": [
-    { "name": "Alanvriito", "world": "Gentebra" },
-    { "name": "Alanvrito", "world": "Nefera" },
-    { "name": "Alanvrito in secura", "world": "Nefera" },
-    { "name": "Eskkanor", "world": "Nefera" },
-    { "name": "Kiing Excanor", "world": "Nefera" },
-    { "name": "Kiing Excanorr", "world": "Tournament - regular" },
-    { "name": "Kiing Might", "world": "Tournament - restricted Store" },
-    { "name": "King Exc", "world": "Secura" },
-    { "name": "King Exckanor", "world": "Solidera" },
-    { "name": "Tio Excanor", "world": "Menera" }
+    { "main": false, "name": "Alanvriito", "status": "offline", "world": "Gentebra" },
+    { "main": false, "name": "Alanvrito", "status": "offline", "world": "Nefera" },
+    { "main": false, "name": "Alanvrito in secura", "status": "offline", "world": "Nefera" },
+    { "main": false, "name": "Eskkanor", "status": "offline", "world": "Nefera" },
+    { "main": true, "name": "Kiing Excanor", "status": "offline", "world": "Nefera" },
+    { "main": false, "name": "Kiing Excanorr", "status": "offline", "world": "Tournament - regular" },
+    { "main": false, "name": "Kiing Might", "status": "offline", "world": "Tournament - restricted Store" },
+    { "main": false, "name": "King Exc", "status": "offline", "world": "Secura" },
+    { "main": false, "name": "King Exckanor", "status": "offline", "world": "Solidera" },
+    { "main": false, "name": "Tio Excanor", "status": "offline", "world": "Menera" }
   ]
 }
