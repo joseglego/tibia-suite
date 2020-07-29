@@ -1,0 +1,150 @@
+{
+  "guildInfo": "Gildia PVP. Organizujemy tez teamhunty i questy dla czlonkow gildi. Teamspeak wymagany. W sprawie dolaczenia skontaktuj sie z ktoryms z liderow.\nThe guild was founded on Antica on Feb 13 2018.\nIt is currently active, but either has no leader, too few vice leaders, or less than 5 accounts with premium status in the ranks held by leader and vice leaders.\nGuild is opened for applications.\nIt will be disbanded on Aug 11 2020 if there are still less than four vice leaders or an insufficient amount of premium accounts in the leading ranks by then.\n",
+  "members": [
+    {
+      "rank": "Supernova",
+      "name": "Cosmopolitan Monarch",
+      "nick": "Czarny",
+      "vocation": "Elite Knight",
+      "level": 422,
+      "joined": "Feb 13 2018",
+      "status": "offline"
+    },
+    {
+      "rank": "Supernova",
+      "name": "Chinoleg The Druid",
+      "nick": "Siema Chinol",
+      "vocation": "Elder Druid",
+      "level": 337,
+      "joined": "Sep 10 2018",
+      "status": "offline"
+    },
+    {
+      "rank": "Supernova",
+      "name": "Cutie Mulan",
+      "nick": null,
+      "vocation": "Elder Druid",
+      "level": 364,
+      "joined": "Jan 08 2019",
+      "status": "offline"
+    },
+    {
+      "rank": "Supernova",
+      "name": "Kladi Maley",
+      "nick": "Szanuj Piwo",
+      "vocation": "Elite Knight",
+      "level": 418,
+      "joined": "Sep 10 2019",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Diabolic Anarchist",
+      "nick": null,
+      "vocation": "Master Sorcerer",
+      "level": 196,
+      "joined": "Apr 11 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Iguana Red",
+      "nick": null,
+      "vocation": "Sorcerer",
+      "level": 205,
+      "joined": "Feb 14 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Inzynier Juras",
+      "nick": null,
+      "vocation": "Knight",
+      "level": 150,
+      "joined": "Apr 15 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Lojalny Jolek",
+      "nick": null,
+      "vocation": "Elder Druid",
+      "level": 153,
+      "joined": "May 22 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Meek Simek",
+      "nick": null,
+      "vocation": "Royal Paladin",
+      "level": 160,
+      "joined": "Apr 07 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Ryzowa Pantera",
+      "nick": null,
+      "vocation": "Elder Druid",
+      "level": 130,
+      "joined": "Apr 26 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Susori",
+      "nick": null,
+      "vocation": "Master Sorcerer",
+      "level": 282,
+      "joined": "Apr 18 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Triaps",
+      "nick": null,
+      "vocation": "Elite Knight",
+      "level": 289,
+      "joined": "Apr 17 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Waldus Kiepski Cycu",
+      "nick": null,
+      "vocation": "Knight",
+      "level": 327,
+      "joined": "May 12 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Yolo Kurfy",
+      "nick": null,
+      "vocation": "Royal Paladin",
+      "level": 122,
+      "joined": "May 06 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Yonee",
+      "nick": null,
+      "vocation": "Royal Paladin",
+      "level": 226,
+      "joined": "Apr 02 2020",
+      "status": "offline"
+    },
+    {
+      "rank": "Lunch Break",
+      "name": "Ziola Ed",
+      "nick": null,
+      "vocation": "Elder Druid",
+      "level": 208,
+      "joined": "Apr 15 2020",
+      "status": "offline"
+    }
+  ],
+  "invitations": [ { "name": "Uzard Alker", "invitationDate": "Jul 23 2020" } ]
+}
