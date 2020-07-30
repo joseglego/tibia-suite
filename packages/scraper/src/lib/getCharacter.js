@@ -2,6 +2,26 @@ const cheerio = require('cheerio')
 const fetchHTML = require('../utils/fetchHTML')
 const tableToJson = require('../utils/tableToJson')
 
+const parseGuild = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+  let guild
+  $('tr')
+    .each((i, element) => {
+      const guildTitle = 'Guild Membership:'
+      const rowTitle = $(element).find('td:nth-of-type(1)').text().trim()
+
+      if (rowTitle === guildTitle) {
+        const text = $(element).find('td:nth-of-type(2)').text()
+        const name = $(element).find('td:nth-of-type(2) a').text()
+        const rank = text.substring(0, text.length - 8 - name.length)
+        guild = { name, rank }
+        return false
+      }
+    })
+
+  return guild
+}
+
 const parseAchievements = (htmlString) => {
   const $ = cheerio.load(htmlString)
   const achievementsEmpty = 'There are no achievements set to be displayed for this character.'
@@ -24,6 +44,17 @@ const parseDeaths = (htmlString) => {
       date: $(element).find('td:nth-of-type(1)').text().trim(),
       description: $(element).find('td:nth-of-type(2)').text().trim()
     })).get()
+}
+
+const parseCharacterInformation = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+  const characterInfo = tableToJson($.html(), 1)
+
+  if (characterInfo.guildMembership) {
+    characterInfo.guildMembership = parseGuild($.html())
+  }
+
+  return characterInfo
 }
 
 const parseCharacters = (htmlString) => {
@@ -55,7 +86,7 @@ const getCharacter = async (name) => {
         },
         'Account Information': () => { result.accountInfo = tableToJson($.html(element), 1) },
         'Character Deaths': () => { result.deaths = parseDeaths($.html(element)) },
-        'Character Information': () => { result.characterInfo = tableToJson($.html(element), 1) },
+        'Character Information': () => { result.characterInfo = parseCharacterInformation($.html(element)) },
         Characters: () => { result.characters = parseCharacters($.html(element)) }
       }
 
