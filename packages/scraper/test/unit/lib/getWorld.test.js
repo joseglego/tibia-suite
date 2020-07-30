@@ -9,7 +9,7 @@ describe('getWorld', () => {
   it('get world page details', async () => {
     fetchHTML.mockResolvedValue(worldPage)
 
-    const world = await getWorld()
+    const world = await getWorld('World Name')
     expect(world)
       .toStrictEqual({
         worldInfo: {
