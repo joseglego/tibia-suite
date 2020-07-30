@@ -13,8 +13,20 @@ const parseGuild = (htmlString) => {
 }
 
 const getGuilds = async (name) => {
-  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&world=${name}`)
+  if (!name) { throw new Error('The world name is required.') }
+  if (typeof name !== 'string') { throw new Error('The world name must be a string.') }
+
+  let body
+  try {
+    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&world=${name}`)
+  } catch (err) {
+    throw new Error('There was a problem with the conection.')
+  }
   const $ = cheerio.load(body)
+
+  if ($('#guilds .CaptionContainer').length === 1) {
+    throw new Error('Could not find world.')
+  }
 
   const active = $('#guilds .TableContentContainer:nth-of-type(1)')
     .find('tr[bgcolor="#D4C0A1"], tr[bgcolor="#F1E0C6"]')
