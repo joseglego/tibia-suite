@@ -31,7 +31,9 @@ describe('getCharacter', () => {
       fetchHTML.mockResolvedValue(charComplexPage)
       const char = await getCharacter('Momzo')
 
-      expect(char.characterInfo.house).toStrictEqual(charComplexResponse.characterInfo.house)
+      expect(char.characterInfo.houses[0]).toStrictEqual(charComplexResponse.characterInfo.houses[0])
+      expect(char.characterInfo.houses[1]).toStrictEqual(charComplexResponse.characterInfo.houses[1])
+      expect(char.characterInfo.houses[2]).toStrictEqual(charComplexResponse.characterInfo.houses[2])
     })
 
     it('get achievements', async () => {

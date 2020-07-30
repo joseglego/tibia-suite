@@ -1,6 +1,28 @@
+const querystring = require('querystring')
 const cheerio = require('cheerio')
 const fetchHTML = require('../utils/fetchHTML')
 const tableToJson = require('../utils/tableToJson')
+
+const parseHouses = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+  const houses = []
+  $('tr')
+    .each((i, element) => {
+      const guildTitle = 'House:'
+      const rowTitle = $(element).find('td:nth-of-type(1)').text().trim()
+
+      if (rowTitle === guildTitle) {
+        const url = $(element).find('td:nth-of-type(2) a').attr('href')
+        const { town, houseid: houseId } = querystring.decode(url)
+        const paidUntil = $(element).find('td:nth-of-type(2)').text().split(' ').slice(-1)[0]
+        const name = $(element).find('td:nth-of-type(2) a').text()
+
+        houses.push({ houseId, name, town, paidUntil })
+      }
+    })
+
+  return houses
+}
 
 const parseGuild = (htmlString) => {
   const $ = cheerio.load(htmlString)
@@ -52,6 +74,11 @@ const parseCharacterInformation = (htmlString) => {
 
   if (characterInfo.guildMembership) {
     characterInfo.guildMembership = parseGuild($.html())
+  }
+
+  if (characterInfo.house) {
+    delete characterInfo.house
+    characterInfo.houses = parseHouses($.html())
   }
 
   return characterInfo
