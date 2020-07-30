@@ -98,8 +98,22 @@ const parseCharacters = (htmlString) => {
 }
 
 const getCharacter = async (name) => {
-  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=characters&name=${name}`)
+  if (!name) { throw new Error('The character name is required.') }
+  if (typeof name !== 'string') { throw new Error('The character name must be a string.') }
+
+  let body
+  try {
+    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=characters&name=${name}`)
+  } catch (err) {
+    throw new Error('There was a problem with the conection.')
+  }
   const $ = cheerio.load(body)
+  const characterNotFound = 'Could not find character'
+
+  if ($('#characters .BoxContent table tr').eq(0).text() === characterNotFound) {
+    throw new Error(`${characterNotFound}.`)
+  }
+
   const result = {}
 
   $('#characters div.BoxContent')
