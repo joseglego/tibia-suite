@@ -33,7 +33,8 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "tabletojson": "^2.0.4"
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "eslint": "^7.3.0",

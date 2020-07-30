@@ -1,78 +1,142 @@
-const tabletojson = require('tabletojson').Tabletojson
-const translateJson = require('../utils/translateJson')
+const querystring = require('querystring')
+const cheerio = require('cheerio')
+const fetchHTML = require('../utils/fetchHTML')
+const tableToJson = require('../utils/tableToJson')
 
-const getArrayInfo = (tableInfo, title) => {
-  const array = tableInfo.find(array => array[0][0] === title)
+const parseHouses = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+  const houses = []
+  $('tr')
+    .each((i, element) => {
+      const guildTitle = 'House:'
+      const rowTitle = $(element).find('td:nth-of-type(1)').text().trim()
 
-  if (!array) {
-    return []
-  }
+      if (rowTitle === guildTitle) {
+        const url = $(element).find('td:nth-of-type(2) a').attr('href')
+        const { town, houseid: houseId } = querystring.decode(url)
+        const paidUntil = $(element).find('td:nth-of-type(2)').text().split(' ').slice(-1)[0]
+        const name = $(element).find('td:nth-of-type(2) a').text()
 
-  return array.slice(1, array.length)
-}
-
-const getCharacterInfo = (tableInfo) => {
-  const characterInfoArray = tableInfo[0].slice(1, tableInfo[0].length)
-
-  return characterInfoArray.reduce(translateJson, {})
-}
-
-const getAchievements = (tableInfo) => {
-  const achievementsTitle = 'Account Achievements'
-  const achievementsEmpty = 'There are no achievements set to be displayed for this character.'
-  const achievementsArray = getArrayInfo(tableInfo, achievementsTitle)
-
-  if (achievementsArray.length === 0 || achievementsArray[0][0] === achievementsEmpty) {
-    return []
-  }
-
-  return achievementsArray.map((achievement) => achievement[1])
-}
-
-const getDeaths = (tableInfo) => {
-  const deathsTitle = 'Character Deaths'
-  const deathsArray = getArrayInfo(tableInfo, deathsTitle)
-
-  return deathsArray.map((death) => ({ date: death[0], description: death[1] }))
-}
-
-const getAccountInfo = (tableInfo) => {
-  const accountInfoTitle = 'Account Information'
-  const accountInfoArray = getArrayInfo(tableInfo, accountInfoTitle)
-
-  return accountInfoArray.reduce(translateJson, {})
-}
-
-const getCharacters = (tableInfo) => {
-  const charactersTitle = 'Characters'
-  const charactersArray = getArrayInfo(tableInfo, charactersTitle)
-
-  if (charactersArray.length === 0) {
-    return []
-  }
-
-  return charactersArray
-    .slice(1, charactersArray.length)
-    .reduce((characters, character) => {
-      if (character[0].length) {
-        characters.push({ name: character[0], world: character[1] })
+        houses.push({ houseId, name, town, paidUntil })
       }
+    })
 
-      return characters
-    }, [])
+  return houses
+}
+
+const parseGuild = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+  let guild
+  $('tr')
+    .each((i, element) => {
+      const guildTitle = 'Guild Membership:'
+      const rowTitle = $(element).find('td:nth-of-type(1)').text().trim()
+
+      if (rowTitle === guildTitle) {
+        const text = $(element).find('td:nth-of-type(2)').text()
+        const name = $(element).find('td:nth-of-type(2) a').text()
+        const rank = text.substring(0, text.length - 8 - name.length)
+        guild = { name, rank }
+        return false
+      }
+    })
+
+  return guild
+}
+
+const parseAchievements = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+  const achievementsEmpty = 'There are no achievements set to be displayed for this character.'
+
+  if ($('tr').eq(1).text() === achievementsEmpty) { return [] }
+
+  return $('tr[bgcolor="#D4C0A1"], tr[bgcolor="#F1E0C6"]')
+    .map((_, element) => ({
+      stars: $(element).find('td:nth-of-type(1)').children().length,
+      name: $(element).find('td:nth-of-type(2)').text().trim()
+    })).get()
+}
+
+const parseDeaths = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+
+  return $('tr')
+    .slice(1)
+    .map((_, element) => ({
+      date: $(element).find('td:nth-of-type(1)').text().trim(),
+      description: $(element).find('td:nth-of-type(2)').text().trim()
+    })).get()
+}
+
+const parseCharacterInformation = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+  const characterInfo = tableToJson($.html(), 1)
+
+  if (characterInfo.guildMembership) {
+    characterInfo.guildMembership = parseGuild($.html())
+  }
+
+  if (characterInfo.house) {
+    delete characterInfo.house
+    characterInfo.houses = parseHouses($.html())
+  }
+
+  return characterInfo
+}
+
+const parseCharacters = (htmlString) => {
+  const $ = cheerio.load(htmlString)
+
+  return $('tr[bgcolor="#D4C0A1"], tr[bgcolor="#F1E0C6"]')
+    .slice(1)
+    .map((_, element) => ({
+      main: $(element).children('td:nth-of-type(1)').html().includes('account/maincharacter.png'),
+      name: $(element).find('input[name="name"]').val(),
+      status: $(element).children('td:nth-of-type(3) ').text() || 'offline',
+      world: $(element).children('td:nth-of-type(2)').text().trim()
+    })).get()
 }
 
 const getCharacter = async (name) => {
-  const url = `https://www.tibia.com/community/?subtopic=characters&name=${name}`
-  const tableInfo = await tabletojson.convertUrl(url)
+  if (!name) { throw new Error('The character name is required.') }
+  if (typeof name !== 'string') { throw new Error('The character name must be a string.') }
 
-  const characterInfo = getCharacterInfo(tableInfo)
-  const achievements = getAchievements(tableInfo)
-  const deaths = getDeaths(tableInfo)
-  const accountInfo = getAccountInfo(tableInfo)
-  const characters = getCharacters(tableInfo)
+  let body
+  try {
+    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=characters&name=${name}`)
+  } catch (err) {
+    throw new Error('There was a problem with the conection.')
+  }
+  const $ = cheerio.load(body)
+  const characterNotFound = 'Could not find character'
 
-  return { characterInfo, achievements, deaths, accountInfo, characters }
+  if ($('#characters .BoxContent table tr').eq(0).text() === characterNotFound) {
+    throw new Error(`${characterNotFound}.`)
+  }
+
+  const result = {}
+
+  $('#characters div.BoxContent')
+    .find('table')
+    .each((index, element) => {
+      const title = $(element).find('tr').eq(0).text().trim()
+      const tasks = {
+        'Account Achievements': () => {
+          const achievements = parseAchievements($.html(element))
+          if (achievements.length) { result.achievements = achievements }
+        },
+        'Account Information': () => { result.accountInfo = tableToJson($.html(element), 1) },
+        'Character Deaths': () => { result.deaths = parseDeaths($.html(element)) },
+        'Character Information': () => { result.characterInfo = parseCharacterInformation($.html(element)) },
+        Characters: () => { result.characters = parseCharacters($.html(element)) }
+      }
+
+      if (title && tasks[title]) {
+        tasks[title]()
+      }
+    })
+
+  return result
 }
 
 module.exports = getCharacter

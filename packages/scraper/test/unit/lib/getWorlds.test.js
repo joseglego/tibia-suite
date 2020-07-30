@@ -1,40 +1,26 @@
-const tabletojson = require('tabletojson').Tabletojson
-
+const fetchHTML = require('../../../src/utils/fetchHTML')
 const getWorlds = require('../../../src/lib/getWorlds')
-const worldsMock = require('../../stubs/worlds.json')
-const worldsWithoutTournamentMock = require('../../stubs/worldsWithoutTournament.json')
-jest.mock('tabletojson')
+
+const withTournamentPage = require('../../stubs/worldsWithTournamentPage')
+const notTournamentPage = require('../../stubs/worldsNotTournamentPage')
+
+const withTournamentResponse = require('../../stubs/worldsWithTournamentResponse.json')
+const notTournamentResponse = require('../../stubs/worldsNotTournamentResponse.json')
+
+jest.mock('../../../src/utils/fetchHTML')
 
 describe('getWorlds', () => {
-  it('get worlds list information', async () => {
-    tabletojson.convertUrl.mockResolvedValue(worldsMock)
+  it('get worlds list information with tournamentworlds', async () => {
+    fetchHTML.mockResolvedValue(withTournamentPage)
 
     const worlds = await getWorlds()
-    expect(worlds)
-      .toStrictEqual({
-        worlds: [
-          { world: 'Antica', online: 826, location: 'Europe', pvpType: 'Open PvP', additionalInfo: '' },
-          { world: 'Assombra', online: 88, location: 'South America', pvpType: 'Retro Hardcore PvP', additionalInfo: '' },
-          { world: 'Astera', online: 342, location: 'North America', pvpType: 'Optional PvP', additionalInfo: '' }
-        ],
-        tournamentWorlds: [
-          { world: 'Endebra', online: 0, location: 'South America', pvpType: 'Open PvP', additionalInfo: 'premium, blocked, restricted Store products' }
-        ]
-      })
+    expect(worlds).toStrictEqual(withTournamentResponse)
   })
 
   it('get worlds list information without tournamentworlds', async () => {
-    tabletojson.convertUrl.mockResolvedValue(worldsWithoutTournamentMock)
+    fetchHTML.mockResolvedValue(notTournamentPage)
 
     const worlds = await getWorlds()
-    expect(worlds)
-      .toStrictEqual({
-        worlds: [
-          { world: 'Antica', online: 826, location: 'Europe', pvpType: 'Open PvP', additionalInfo: '' },
-          { world: 'Assombra', online: 88, location: 'South America', pvpType: 'Retro Hardcore PvP', additionalInfo: '' },
-          { world: 'Astera', online: 342, location: 'North America', pvpType: 'Optional PvP', additionalInfo: '' }
-        ],
-        tournamentWorlds: []
-      })
+    expect(worlds).toStrictEqual(notTournamentResponse)
   })
 })

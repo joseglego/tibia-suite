@@ -1,31 +1,44 @@
-const tabletojson = require('tabletojson').Tabletojson
+const cheerio = require('cheerio')
+const fetchHTML = require('../utils/fetchHTML')
 
-const translateGuild = (json) => {
-  const imageEval = /src="(.+)"/.exec(json[0])
-  const nameEval = /<b>(.+)<\/b>/.exec(json[1])
-  const descriptionEval = /<\/b><br>(.*)/.exec(json[1])
+const parseGuild = (htmlString) => {
+  const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
+  const name = $('td:nth-of-type(2) b').text()
 
   return ({
-    image: imageEval[1],
-    name: nameEval[1],
-    description: descriptionEval[1]
+    description: $('td:nth-of-type(2)').text().slice(name.length),
+    logo: $('td:nth-of-type(1) img').attr('src'),
+    name
   })
 }
 
-const translateGuilds = (acc, guildJson) => {
-  if (guildJson[0] && guildJson[1]) {
-    acc.push(translateGuild(guildJson))
+const getGuilds = async (name) => {
+  if (!name) { throw new Error('The world name is required.') }
+  if (typeof name !== 'string') { throw new Error('The world name must be a string.') }
+
+  let body
+  try {
+    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&world=${name}`)
+  } catch (err) {
+    throw new Error('There was a problem with the conection.')
+  }
+  const $ = cheerio.load(body)
+
+  if ($('#guilds .CaptionContainer').length === 1) {
+    throw new Error('Could not find world.')
   }
 
-  return acc
-}
-const getGuilds = async (name) => {
-  const url = `https://www.tibia.com/community/?subtopic=guilds&world=${name}`
-  const tableInfo = await tabletojson.convertUrl(url, { stripHtmlFromCells: false })
+  const active = $('#guilds .TableContentContainer:nth-of-type(1)')
+    .find('tr[bgcolor="#D4C0A1"], tr[bgcolor="#F1E0C6"]')
+    .slice(1)
+    .map((i, element) => parseGuild($(element).html())).get()
 
-  const guilds = tableInfo[6].slice(1, tableInfo[6].length).reduce(translateGuilds, [])
+  const formation = $('#guilds .TableContentContainer:nth-of-type(2)')
+    .find('tr[bgcolor="#D4C0A1"], tr[bgcolor="#F1E0C6"]')
+    .slice(1)
+    .map((i, element) => parseGuild($(element).html())).get()
 
-  return { guilds }
+  return { world: name, active, formation }
 }
 
 module.exports = getGuilds

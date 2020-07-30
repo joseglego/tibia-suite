@@ -1,0 +1,61 @@
+{
+  "characterInfo": {
+    "name": "Kiing Excanor",
+    "title": "Legend of Magic (26 titles unlocked)",
+    "sex": "male",
+    "vocation": "Elder Druid",
+    "level": 1506,
+    "achievementPoints": 824,
+    "world": "Nefera",
+    "residence": "Carlin",
+    "houses": [{
+      "houseId": "33001",
+      "name": "Lost Cavern",
+      "town": "Kazordoon",
+      "paidUntil": "Aug 14 2020"
+    }, {
+      "houseId": "20401",
+      "name": "Theater Avenue 10",
+      "town": "Carlin",
+      "paidUntil": "Aug 14 2020"
+    }, {
+      "houseId": "10408",
+      "name": "Upper Swamp Lane 12",
+      "town": "Thais",
+      "paidUntil": "Aug 09 2020"
+    }],
+    "guildMembership": { "name": "United Fighters", "rank": "Top" },
+    "lastLogin": "Jul 29 2020, 11:51:59 CEST",
+    "comment": "Hail To The Kiing\n\nAlways be your self.\nLearn from your mistakes.\nAlways protect the ones you care.\nNever giveup. \n8/20/2018\n03:29 You advanced from Level 899 to Level 900. \n\n12/3/2018\n09:10 You advanced from Level 999 to Level 1000.\n\n9/2/2019\n11:23 You advanced from Level 1299 to Level 1300.\n7/192020\n21:28 You advanced from Level 1499 to Level 1500.",
+    "accountStatus": "Premium Account"
+  },
+  "achievements": [
+    { "stars": 2, "name": "Alumni" },
+    { "stars": 3, "name": "Dread Lord" },
+    { "stars": 2, "name": "Marble Madness" },
+    { "stars": 3, "name": "Razing!" },
+    { "stars": 2, "name": "True Dedication" }
+  ],
+  "deaths": [
+    {
+      "date": "Jul 05 2020, 06:38:34 CEST",
+      "description": "Died at Level 1489 by an energetic book."
+    }
+  ],
+  "accountInfo": {
+    "loyaltyTitle": "Keeper of Tibia",
+    "created": "Jul 24 2009, 21:08:29 CEST"
+  },
+  "characters": [
+    { "main": false, "name": "Alanvriito", "status": "offline", "world": "Gentebra" },
+    { "main": false, "name": "Alanvrito", "status": "offline", "world": "Nefera" },
+    { "main": false, "name": "Alanvrito in secura", "status": "offline", "world": "Nefera" },
+    { "main": false, "name": "Eskkanor", "status": "offline", "world": "Nefera" },
+    { "main": true, "name": "Kiing Excanor", "status": "offline", "world": "Nefera" },
+    { "main": false, "name": "Kiing Excanorr", "status": "offline", "world": "Tournament - regular" },
+    { "main": false, "name": "Kiing Might", "status": "offline", "world": "Tournament - restricted Store" },
+    { "main": false, "name": "King Exc", "status": "offline", "world": "Secura" },
+    { "main": false, "name": "King Exckanor", "status": "offline", "world": "Solidera" },
+    { "main": false, "name": "Tio Excanor", "status": "offline", "world": "Menera" }
+  ]
+}
