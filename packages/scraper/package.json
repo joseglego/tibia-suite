@@ -1,6 +1,6 @@
 {
   "name": "@tibia-suite/scraper",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "A helper to get information from tibia.com to check up to date information.",
   "main": "index.js",
   "keywords": [
