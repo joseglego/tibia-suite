@@ -27,8 +27,23 @@ const parseInvitation = (htmlString) => {
 }
 
 const getGuild = async (name) => {
-  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=${name}`)
+  if (!name) { throw new Error('The guild name is required.') }
+  if (typeof name !== 'string') { throw new Error('The guild name must be a string.') }
+
+  let body
+  try {
+    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=${name}`)
+  } catch (err) {
+    throw new Error('There was a problem with the conection.')
+  }
+
   const $ = cheerio.load(body)
+  const guildNotFound = 'An internal error has occurred. Please try again later!'
+
+  if ($('#guilds .BoxContent table tr').eq(0).text() === guildNotFound) {
+    throw new Error('Could not find guild.')
+  }
+
   let rank
 
   const logo = $('#guilds .BoxContent img').attr('src')
