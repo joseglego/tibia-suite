@@ -39,7 +39,8 @@
   "deaths": [
     {
       "date": "Jul 05 2020, 06:38:34 CEST",
-      "description": "Died at Level 1489 by an energetic book."
+      "description": "Died at Level 1489 by an energetic book.",
+      "involved": []
     }
   ],
   "accountInfo": {

@@ -64,7 +64,8 @@ const parseDeaths = (htmlString) => {
     .slice(1)
     .map((_, element) => ({
       date: $(element).find('td:nth-of-type(1)').text().trim(),
-      description: $(element).find('td:nth-of-type(2)').text().trim()
+      description: $(element).find('td:nth-of-type(2)').text().trim(),
+      involved: $(element).find('td:nth-of-type(2) a').map((_, a) => $(a).text()).get()
     })).get()
 }
 
