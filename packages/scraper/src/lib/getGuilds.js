@@ -1,5 +1,7 @@
 const cheerio = require('cheerio')
+
 const fetchHTML = require('../utils/fetchHTML')
+const validateInput = require('../utils/validateInput')
 
 const parseGuild = (htmlString) => {
   const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
@@ -13,8 +15,7 @@ const parseGuild = (htmlString) => {
 }
 
 const getGuilds = async (name) => {
-  if (!name) { throw new Error('The world name is required.') }
-  if (typeof name !== 'string') { throw new Error('The world name must be a string.') }
+  validateInput(name, 'World Name')
 
   let body
   try {

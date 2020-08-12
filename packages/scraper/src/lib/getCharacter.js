@@ -1,7 +1,9 @@
 const querystring = require('querystring')
 const cheerio = require('cheerio')
+
 const fetchHTML = require('../utils/fetchHTML')
 const tableToJson = require('../utils/tableToJson')
+const validateInput = require('../utils/validateInput')
 
 const parseHouses = (htmlString) => {
   const $ = cheerio.load(htmlString)
@@ -99,8 +101,7 @@ const parseCharacters = (htmlString) => {
 }
 
 const getCharacter = async (name) => {
-  if (!name) { throw new Error('The character name is required.') }
-  if (typeof name !== 'string') { throw new Error('The character name must be a string.') }
+  validateInput(name, 'Character Name')
 
   let body
   try {

@@ -1,5 +1,7 @@
 const cheerio = require('cheerio')
+
 const fetchHTML = require('../utils/fetchHTML')
+const validateInput = require('../utils/validateInput')
 
 const parseMember = (rank, htmlString) => {
   const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
@@ -27,8 +29,7 @@ const parseInvitation = (htmlString) => {
 }
 
 const getGuild = async (name) => {
-  if (!name) { throw new Error('The guild name is required.') }
-  if (typeof name !== 'string') { throw new Error('The guild name must be a string.') }
+  validateInput(name, 'Guild Name')
 
   let body
   try {

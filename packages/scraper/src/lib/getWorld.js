@@ -1,6 +1,8 @@
 const cheerio = require('cheerio')
+
 const fetchHTML = require('../utils/fetchHTML')
 const tableToJson = require('../utils/tableToJson')
+const validateInput = require('../utils/validateInput')
 
 const parseCharacter = (htmlString) => {
   const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
@@ -13,8 +15,7 @@ const parseCharacter = (htmlString) => {
 }
 
 const getWorld = async (name) => {
-  if (!name) { throw new Error('The world name is required.') }
-  if (typeof name !== 'string') { throw new Error('The world name must be a string.') }
+  validateInput(name, 'World Name')
 
   let body
   try {
