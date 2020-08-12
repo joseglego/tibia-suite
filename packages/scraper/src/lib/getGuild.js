@@ -31,13 +31,7 @@ const parseInvitation = (htmlString) => {
 const getGuild = async (name) => {
   validateInput(name, 'Guild Name')
 
-  let body
-  try {
-    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=${name}`)
-  } catch (err) {
-    throw new Error('There was a problem with the conection.')
-  }
-
+  const body  = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=${name}`)
   const $ = cheerio.load(body)
   const guildNotFound = 'An internal error has occurred. Please try again later!'
 

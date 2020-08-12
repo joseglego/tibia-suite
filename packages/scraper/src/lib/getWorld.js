@@ -17,13 +17,7 @@ const parseCharacter = (htmlString) => {
 const getWorld = async (name) => {
   validateInput(name, 'World Name')
 
-  let body
-  try {
-    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=worlds&world=${name}`)
-  } catch (err) {
-    throw new Error('There was a problem with the conection.')
-  }
-
+  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=worlds&world=${name}`)
   const worldNotFound = 'World with this name doesn\'t exist!'
   const $ = cheerio.load(body)
 

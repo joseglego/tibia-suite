@@ -17,12 +17,7 @@ const parseGuild = (htmlString) => {
 const getGuilds = async (name) => {
   validateInput(name, 'World Name')
 
-  let body
-  try {
-    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&world=${name}`)
-  } catch (err) {
-    throw new Error('There was a problem with the conection.')
-  }
+  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&world=${name}`)
   const $ = cheerio.load(body)
 
   if ($('#guilds .CaptionContainer').length === 1) {

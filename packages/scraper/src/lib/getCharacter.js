@@ -103,12 +103,7 @@ const parseCharacters = (htmlString) => {
 const getCharacter = async (name) => {
   validateInput(name, 'Character Name')
 
-  let body
-  try {
-    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=characters&name=${name}`)
-  } catch (err) {
-    throw new Error('There was a problem with the conection.')
-  }
+  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=characters&name=${name}`)
   const $ = cheerio.load(body)
   const characterNotFound = 'Could not find character'
 
