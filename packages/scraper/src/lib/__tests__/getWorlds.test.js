@@ -1,13 +1,13 @@
-const fetchHTML = require('../../../src/utils/fetchHTML')
-const getWorlds = require('../../../src/lib/getWorlds')
+const fetchHTML = require('../../utils/fetchHTML')
+const getWorlds = require('../getWorlds')
 
-const withTournamentPage = require('../../stubs/worldsWithTournamentPage')
-const notTournamentPage = require('../../stubs/worldsNotTournamentPage')
+const withTournamentPage = require('../../../test/stubs/worldsWithTournamentPage')
+const notTournamentPage = require('../../../test/stubs/worldsNotTournamentPage')
 
-const withTournamentResponse = require('../../stubs/worldsWithTournamentResponse.json')
-const notTournamentResponse = require('../../stubs/worldsNotTournamentResponse.json')
+const withTournamentResponse = require('../../../test/stubs/worldsWithTournamentResponse.json')
+const notTournamentResponse = require('../../../test/stubs/worldsNotTournamentResponse.json')
 
-jest.mock('../../../src/utils/fetchHTML')
+jest.mock('../../utils/fetchHTML')
 
 describe('getWorlds', () => {
   it('get worlds list information with tournamentworlds', async () => {

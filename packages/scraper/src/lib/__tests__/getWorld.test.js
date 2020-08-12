@@ -1,9 +1,9 @@
-const fetchHTML = require('../../../src/utils/fetchHTML')
+const fetchHTML = require('../../utils/fetchHTML')
 
-const getWorld = require('../../../src/lib/getWorld')
-const worldPage = require('../../stubs/worldPage')
+const getWorld = require('../getWorld')
+const worldPage = require('../../../test/stubs/worldPage')
 
-jest.mock('../../../src/utils/fetchHTML')
+jest.mock('../../utils/fetchHTML')
 
 describe('getWorld', () => {
   it('get world page details', async () => {

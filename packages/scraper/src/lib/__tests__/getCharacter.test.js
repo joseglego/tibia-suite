@@ -1,12 +1,12 @@
-const fetchHTML = require('../../../src/utils/fetchHTML')
-const getCharacter = require('../../../src/lib/getCharacter')
+const fetchHTML = require('../../utils/fetchHTML')
+const getCharacter = require('../getCharacter')
 
-const charBasicPage = require('../../stubs/charBasicPage')
-const charBasicResponse = require('../../stubs/charBasicResponse.json')
-const charComplexPage = require('../../stubs/charComplexPage')
-const charComplexResponse = require('../../stubs/charComplexResponse.json')
+const charBasicPage = require('../../../test/stubs/charBasicPage')
+const charBasicResponse = require('../../../test/stubs/charBasicResponse.json')
+const charComplexPage = require('../../../test/stubs/charComplexPage')
+const charComplexResponse = require('../../../test/stubs/charComplexResponse.json')
 
-jest.mock('../../../src/utils/fetchHTML')
+jest.mock('../../utils/fetchHTML')
 
 describe('getCharacter', () => {
   it('get basic character info', async () => {

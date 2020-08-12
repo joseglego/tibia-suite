@@ -1,9 +1,9 @@
-const fetchHTML = require('../../../src/utils/fetchHTML')
-const getGuilds = require('../../../src/lib/getGuilds')
+const fetchHTML = require('../../utils/fetchHTML')
+const getGuilds = require('../getGuilds')
 
-const guildsPage = require('../../stubs/guildsPage.js')
+const guildsPage = require('../../../test/stubs/guildsPage.js')
 
-jest.mock('../../../src/utils/fetchHTML')
+jest.mock('../../utils/fetchHTML')
 
 describe('getGuilds', () => {
   it('get guilds from a world', async () => {
