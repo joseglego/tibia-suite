@@ -3,6 +3,7 @@ const cheerio = require('cheerio')
 const fetchHTML = require('../utils/fetchHTML')
 const tableToJson = require('../utils/tableToJson')
 const validateInput = require('../utils/validateInput')
+const notFoundError = require('../utils/notFoundError')
 
 const parseCharacter = (htmlString) => {
   const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
@@ -22,7 +23,7 @@ const getWorld = async (name) => {
   const $ = cheerio.load(body)
 
   if ($('#worlds .BoxContent table tr').eq(0).text() === worldNotFound) {
-    throw new Error(`${worldNotFound}.`)
+    notFoundError('World')
   }
 
   const worldInfo = tableToJson($('#worlds .InnerTableContainer').eq(1).html())

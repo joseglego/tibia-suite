@@ -2,6 +2,7 @@ const cheerio = require('cheerio')
 
 const fetchHTML = require('../utils/fetchHTML')
 const validateInput = require('../utils/validateInput')
+const notFoundError = require('../utils/notFoundError')
 
 const parseMember = (rank, htmlString) => {
   const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
@@ -36,7 +37,7 @@ const getGuild = async (name) => {
   const guildNotFound = 'An internal error has occurred. Please try again later!'
 
   if ($('#guilds .BoxContent table tr').eq(0).text() === guildNotFound) {
-    throw new Error('Could not find guild.')
+    notFoundError('Guild')
   }
 
   let rank

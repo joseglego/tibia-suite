@@ -4,6 +4,7 @@ const cheerio = require('cheerio')
 const fetchHTML = require('../utils/fetchHTML')
 const tableToJson = require('../utils/tableToJson')
 const validateInput = require('../utils/validateInput')
+const notFoundError = require('../utils/notFoundError')
 
 const parseHouses = (htmlString) => {
   const $ = cheerio.load(htmlString)
@@ -108,7 +109,7 @@ const getCharacter = async (name) => {
   const characterNotFound = 'Could not find character'
 
   if ($('#characters .BoxContent table tr').eq(0).text() === characterNotFound) {
-    throw new Error(`${characterNotFound}.`)
+    notFoundError('Character')
   }
 
   const result = {}
