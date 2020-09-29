@@ -1,0 +1,33 @@
+{
+  "name": "@tibia-suite/serverless",
+  "version": "0.1.0",
+  "description": "A serverless API to access the info in an easier way",
+  "keywords": [
+    "serverless",
+    "tibia"
+  ],
+  "author": "Jose Lezama <joseglego@gmail.com>",
+  "homepage": "https://github.com/joseglego/tibia-suite#readme",
+  "license": "ISC",
+  "main": "lib/serverless.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseglego/tibia-suite.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/joseglego/tibia-suite/issues"
+  },
+  "dependencies": {
+    "@tibia-suite/scraper": "^0.1.6"
+  }
+}
