@@ -2,7 +2,7 @@ const scraper = require('@tibia-suite/scraper');
 const response = require('./utils/response');
 
 exports.handler = async ({ path }) => {
-  const name = path.split('/')[4];
+  const name = path.split('/')[3];
 
   if (name) {
     let world;
