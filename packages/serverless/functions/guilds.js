@@ -2,7 +2,7 @@ const scraper = require('@tibia-suite/scraper');
 const response = require('./utils/response');
 
 exports.handler = async ({ path, queryStringParameters }) => {
-  const guildName = path.split('/')[3];
+  const guildName = path.split('/')[3] || queryStringParameters.name;
 
   if (guildName) {
     let guild;
