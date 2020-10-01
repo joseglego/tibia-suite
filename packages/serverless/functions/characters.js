@@ -1,8 +1,8 @@
 const scraper = require('@tibia-suite/scraper');
 const response = require('./utils/response');
 
-exports.handler = async ({ queryStringParameters }) => {
-  const {name} = queryStringParameters;
+exports.handler = async ({ path, queryStringParameters }) => {
+  const name = path.split('/')[4] || queryStringParameters.name;
 
   if (!name) { return response.notFound(); }
 
