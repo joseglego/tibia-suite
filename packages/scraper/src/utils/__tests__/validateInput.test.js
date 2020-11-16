@@ -20,9 +20,8 @@ describe('validateInput', () => {
   test('use custom name', async () => {
     function callFunction () {
       validateInput(null, 'CUSTOM NAME')
-    }    
+    }
 
     expect(callFunction).toThrowError('CUSTOM NAME')
   })
 })
-

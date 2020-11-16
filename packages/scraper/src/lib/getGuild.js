@@ -32,11 +32,11 @@ const parseInvitation = (htmlString) => {
 const getGuild = async (name) => {
   validateInput(name, 'Guild Name')
 
-  const body  = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=${name}`)
+  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=${name}`)
   const $ = cheerio.load(body)
   const guildNotFound = 'An internal error has occurred. Please try again later!'
 
-  if ($('#guilds .BoxContent table tr').eq(0).text() === guildNotFound) {
+  if ($('#guilds .BoxContent table tr').eq(0).text().includes(guildNotFound)) {
     notFoundError('Guild')
   }
 

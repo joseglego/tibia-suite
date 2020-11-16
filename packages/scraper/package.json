@@ -27,7 +27,7 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "eslint src test/unit",
+    "lint": "eslint src",
     "start": "node src/index.js",
     "test": "jest",
     "test:coverage": "jest --coverage"

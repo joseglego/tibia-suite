@@ -19,10 +19,10 @@ const getWorld = async (name) => {
   validateInput(name, 'World Name')
 
   const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=worlds&world=${name}`)
-  const worldNotFound = 'World with this name doesn\'t exist!'
+  const worldNotFound = 'Overall Maximum:'
   const $ = cheerio.load(body)
 
-  if ($('#worlds .BoxContent table tr').eq(0).text() === worldNotFound) {
+  if ($('#worlds .BoxContent table tr').eq(0).text().includes(worldNotFound)) {
     notFoundError('World')
   }
 

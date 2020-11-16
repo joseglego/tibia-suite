@@ -3,6 +3,7 @@ const cheerio = require('cheerio')
 const fetchHTML = require('../utils/fetchHTML')
 const validateInput = require('../utils/validateInput')
 const notFoundError = require('../utils/notFoundError')
+
 const parseGuild = (htmlString) => {
   const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
   const name = $('td:nth-of-type(2) b').text()
