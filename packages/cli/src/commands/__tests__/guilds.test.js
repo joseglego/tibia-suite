@@ -2,10 +2,10 @@ const { expect, test } = require('@oclif/test')
 
 const scraper = require('@tibia-suite/scraper')
 
-const basicStub = require('../stubs/guildsResponse.json')
-const basicStdout = require('../stubs/guildsStdout')
-const filteredStdout = require('../stubs/guildsFilteredStdout')
-const insensitiveStdout = require('../stubs/guildsInsensitiveStdout')
+const basicStub = require('../../../test/stubs/guildsResponse.json')
+const basicStdout = require('../../../test/stubs/guildsStdout')
+const filteredStdout = require('../../../test/stubs/guildsFilteredStdout')
+const insensitiveStdout = require('../../../test/stubs/guildsInsensitiveStdout')
 
 describe('@tibia-suite/cli guilds', () => {
   test

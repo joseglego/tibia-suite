@@ -2,13 +2,13 @@ const { expect, test } = require('@oclif/test')
 
 const scraper = require('@tibia-suite/scraper')
 
-const guildStub = require('../stubs/guildResponse.json')
-const guildAllOnlineStub = require('../stubs/guildAllOnlineResponse.json')
+const guildStub = require('../../../test/stubs/guildResponse.json')
+const guildAllOnlineStub = require('../../../test/stubs/guildAllOnlineResponse.json')
 
-const guildStoud = require('../stubs/guildStdout')
-const guildOnlineStoud = require('../stubs/guildOnlineStdout')
-const guildAllOnlineStoud = require('../stubs/guildAllOnlineStdout.js')
-const guildLevelStoud = require('../stubs/guildLevelStdout')
+const guildStoud = require('../../../test/stubs/guildStdout')
+const guildOnlineStoud = require('../../../test/stubs/guildOnlineStdout')
+const guildAllOnlineStoud = require('../../../test/stubs/guildAllOnlineStdout.js')
+const guildLevelStoud = require('../../../test/stubs/guildLevelStdout')
 
 describe('@tibia-suite/cli guild', () => {
   test

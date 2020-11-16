@@ -2,10 +2,10 @@ const { expect, test } = require('@oclif/test')
 
 const scraper = require('@tibia-suite/scraper')
 
-const worldStub = require('../stubs/worldResponse.json')
-const worldStdout = require('../stubs/worldStdout')
-const worldLevelStdout = require('../stubs/worldLevelStdout')
-const worldVocationStdout = require('../stubs/worldVocationStdout')
+const worldStub = require('../../../test/stubs/worldResponse.json')
+const worldStdout = require('../../../test/stubs/worldStdout')
+const worldLevelStdout = require('../../../test/stubs/worldLevelStdout')
+const worldVocationStdout = require('../../../test/stubs/worldVocationStdout')
 
 describe('@tibia-suite/cli world', () => {
   test
