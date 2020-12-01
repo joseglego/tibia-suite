@@ -41,6 +41,13 @@
       "date": "Jul 05 2020, 06:38:34 CEST",
       "description": "Died at Level 1489 by an energetic book.",
       "involved": []
+    },
+    {
+      "date": "Oct 24 2020, 21:31:50 CEST",
+      "description": "Killed at Level 48 by A Character.",
+      "involved": [
+        "A Character"
+      ]
     }
   ],
   "accountInfo": {

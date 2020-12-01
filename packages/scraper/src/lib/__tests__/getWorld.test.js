@@ -1,11 +1,21 @@
-const fetchHTML = require('../../../src/utils/fetchHTML')
+const fetchHTML = require('../../utils/fetchHTML')
+const notFoundError = require('../../utils/notFoundError')
+const getWorld = require('../getWorld')
 
-const getWorld = require('../../../src/lib/getWorld')
-const worldPage = require('../../stubs/worldPage')
+const worldsPage = require('../../../test/stubs/worldsPage')
+const worldPage = require('../../../test/stubs/worldPage')
 
-jest.mock('../../../src/utils/fetchHTML')
+jest.mock('../../utils/fetchHTML')
+jest.mock('../../utils/notFoundError')
 
 describe('getWorld', () => {
+  it('throw error when world does not exist', async () => {
+    fetchHTML.mockResolvedValue(worldsPage)
+
+    await getWorld('An Unknown World')
+    expect(notFoundError).toHaveBeenNthCalledWith(1, 'World')
+  })
+
   it('get world page details', async () => {
     fetchHTML.mockResolvedValue(worldPage)
 

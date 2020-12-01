@@ -9,6 +9,7 @@ const parseBattleEye = srcImg => {
 }
 
 const parseWorld = (htmlString) => {
+
   const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
 
   return ({
@@ -25,11 +26,11 @@ const getWorlds = async () => {
   const body = await fetchHTML('https://www.tibia.com/community/?subtopic=worlds')
   const $ = cheerio.load(body)
 
-  const worlds = $('#worlds .TableContentContainer:nth-of-type(3)')
+  const worlds = $('#worlds .TableContentContainer').eq(2)
     .find('tr.Odd,tr.Even')
     .map((i, element) => parseWorld($(element).html())).get()
 
-  const tournamentWorlds = $('#worlds .TableContentContainer:nth-of-type(5)')
+  const tournamentWorlds = $('#worlds .TableContentContainer').eq(4)
     .find('tr.Odd,tr.Even')
     .map((i, element) => parseWorld($(element).html())).get()
 

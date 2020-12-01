@@ -50,9 +50,9 @@ class GuildsCommand extends Command {
 GuildsCommand.description = 'List the guilds of a world'
 
 GuildsCommand.flags = {
-  server: flags.string({ char: 's', description: 'server where the guilds are', required: true }),
+  server: flags.string({ char: 's', description: 'server where the guilds are' }),
   filter: flags.string({ char: 'f', description: 'find by (part of the) name', required: false }),
-  insensitive: flags.boolean({ char: 'i', description: 'find is insensitive', dependsOn: ['filter'] })
+  insensitive: flags.boolean({ char: 'i', description: 'find is insensitive', dependsOn: ['filter'], required: false })
 }
 
 module.exports = GuildsCommand

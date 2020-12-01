@@ -1,7 +1,10 @@
 const querystring = require('querystring')
 const cheerio = require('cheerio')
+
 const fetchHTML = require('../utils/fetchHTML')
 const tableToJson = require('../utils/tableToJson')
+const validateInput = require('../utils/validateInput')
+const notFoundError = require('../utils/notFoundError')
 
 const parseHouses = (htmlString) => {
   const $ = cheerio.load(htmlString)
@@ -99,20 +102,14 @@ const parseCharacters = (htmlString) => {
 }
 
 const getCharacter = async (name) => {
-  if (!name) { throw new Error('The character name is required.') }
-  if (typeof name !== 'string') { throw new Error('The character name must be a string.') }
+  validateInput(name, 'Character Name')
 
-  let body
-  try {
-    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=characters&name=${name}`)
-  } catch (err) {
-    throw new Error('There was a problem with the conection.')
-  }
+  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=characters&name=${name}`)
   const $ = cheerio.load(body)
   const characterNotFound = 'Could not find character'
 
   if ($('#characters .BoxContent table tr').eq(0).text() === characterNotFound) {
-    throw new Error(`${characterNotFound}.`)
+    notFoundError('Character')
   }
 
   const result = {}

@@ -1,0 +1,710 @@
+{
+  "worlds": [
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Adra",
+      "online": 261,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Antica",
+      "online": 720,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Assombra",
+      "online": 115,
+      "pvpType": "Retro Hardcore PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Astera",
+      "online": 290,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "blocked",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Belluma",
+      "online": 51,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Belobra",
+      "online": 439,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Bona",
+      "online": 459,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Calmera",
+      "online": 241,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Carnera",
+      "online": 60,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Celebra",
+      "online": 311,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Celesta",
+      "online": 291,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "blocked",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Concorda",
+      "online": 118,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Cosera",
+      "online": 104,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Damora",
+      "online": 487,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Descubra",
+      "online": 350,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Dibra",
+      "online": 212,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Duna",
+      "online": 29,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Emera",
+      "online": 52,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Epoca",
+      "online": 109,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Estela",
+      "online": 371,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Faluna",
+      "online": 94,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Ferobra",
+      "online": 337,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Firmera",
+      "online": 137,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Funera",
+      "online": 32,
+      "pvpType": "Retro Hardcore PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Furia",
+      "online": 24,
+      "pvpType": "Retro Hardcore PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Garnera",
+      "online": 233,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Gentebra",
+      "online": 448,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Gladera",
+      "online": 415,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Harmonia",
+      "online": 399,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Helera",
+      "online": 78,
+      "pvpType": "Retro Hardcore PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Honbra",
+      "online": 364,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Impera",
+      "online": 235,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Inabra",
+      "online": 418,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Javibra",
+      "online": 187,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Jonera",
+      "online": 95,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Kalibra",
+      "online": 362,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Kenora",
+      "online": 218,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Libertabra",
+      "online": 140,
+      "pvpType": "Retro Hardcore PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Lobera",
+      "online": 310,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Luminera",
+      "online": 192,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Lutabra",
+      "online": 291,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Macabra",
+      "online": 141,
+      "pvpType": "Retro Hardcore PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Menera",
+      "online": 229,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "blocked",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Mitigera",
+      "online": 55,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Monza",
+      "online": 392,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Nefera",
+      "online": 325,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Noctera",
+      "online": 130,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Nossobra",
+      "online": 168,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Olera",
+      "online": 92,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Ombra",
+      "online": 283,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Pacembra",
+      "online": 285,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Pacera",
+      "online": 250,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Peloria",
+      "online": 514,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "premium",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Premia",
+      "online": 183,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Pyra",
+      "online": 26,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Quelibra",
+      "online": 479,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Quintera",
+      "online": 218,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Ragna",
+      "online": 36,
+      "pvpType": "Retro Hardcore PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Refugia",
+      "online": 332,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Relania",
+      "online": 177,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Relembra",
+      "online": 252,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Secura",
+      "online": 678,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Serdebra",
+      "online": 332,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Serenebra",
+      "online": 211,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Solidera",
+      "online": 254,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Talera",
+      "online": 462,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "blocked",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Torpera",
+      "online": 84,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Tortura",
+      "online": 42,
+      "pvpType": "Retro Hardcore PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Unica",
+      "online": 61,
+      "pvpType": "Retro Open PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Utobra",
+      "online": 326,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Venebra",
+      "online": 264,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Vita",
+      "online": 98,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "Europe",
+      "name": "Vunira",
+      "online": 408,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "North America",
+      "name": "Wintera",
+      "online": 337,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Wizera",
+      "online": 178,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Xandebra",
+      "online": 345,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Xylona",
+      "online": 64,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "",
+      "battleEye": "protected",
+      "location": "South America",
+      "name": "Yonabra",
+      "online": 247,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Ysolera",
+      "online": 53,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Zenobra",
+      "online": 157,
+      "pvpType": "Open PvP"
+    },
+    {
+      "additionalInfo": "locked, experimental game world",
+      "battleEye": "",
+      "location": "Europe",
+      "name": "Zuna",
+      "online": 28,
+      "pvpType": "Hardcore PvP"
+    },
+    {
+      "additionalInfo": "locked, experimental game world",
+      "battleEye": "",
+      "location": "North America",
+      "name": "Zunera",
+      "online": 19,
+      "pvpType": "Hardcore PvP"
+    }
+  ],
+  "tournamentWorlds": [
+    {
+      "additionalInfo": "premium, blocked, restricted Store products",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Endebra",
+      "online": 0,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked, restricted Store products",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Endera",
+      "online": 0,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked, restricted Store products",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Endura",
+      "online": 0,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "North America",
+      "name": "Velocera",
+      "online": 0,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "South America",
+      "name": "Velocibra",
+      "online": 0,
+      "pvpType": "Optional PvP"
+    },
+    {
+      "additionalInfo": "premium, blocked",
+      "battleEye": "initial",
+      "location": "Europe",
+      "name": "Velocita",
+      "online": 0,
+      "pvpType": "Optional PvP"
+    }
+  ]
+}

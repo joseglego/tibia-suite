@@ -1,5 +1,8 @@
 const cheerio = require('cheerio')
+
 const fetchHTML = require('../utils/fetchHTML')
+const validateInput = require('../utils/validateInput')
+const notFoundError = require('../utils/notFoundError')
 
 const parseMember = (rank, htmlString) => {
   const $ = cheerio.load(`<table><tr>${htmlString}</tr></table>`)
@@ -27,21 +30,14 @@ const parseInvitation = (htmlString) => {
 }
 
 const getGuild = async (name) => {
-  if (!name) { throw new Error('The guild name is required.') }
-  if (typeof name !== 'string') { throw new Error('The guild name must be a string.') }
+  validateInput(name, 'Guild Name')
 
-  let body
-  try {
-    body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=${name}`)
-  } catch (err) {
-    throw new Error('There was a problem with the conection.')
-  }
-
+  const body = await fetchHTML(`https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=${name}`)
   const $ = cheerio.load(body)
   const guildNotFound = 'An internal error has occurred. Please try again later!'
 
-  if ($('#guilds .BoxContent table tr').eq(0).text() === guildNotFound) {
-    throw new Error('Could not find guild.')
+  if ($('#guilds .BoxContent table tr').eq(0).text().includes(guildNotFound)) {
+    notFoundError('Guild')
   }
 
   let rank

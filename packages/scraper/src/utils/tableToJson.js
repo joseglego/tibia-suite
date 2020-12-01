@@ -15,6 +15,7 @@ const getValue = (acc, keyName, rawValue) => {
 }
 
 const tableToJson = (htmlString, offset = 0) => {
+  if (!htmlString) { return {} }
   const $ = cheerio.load(htmlString)
   const acc = {}
 

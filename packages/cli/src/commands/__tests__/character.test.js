@@ -2,11 +2,11 @@ const { expect, test } = require('@oclif/test')
 
 const scraper = require('@tibia-suite/scraper')
 
-const basicStub = require('../stubs/basicCharacterResponse.json')
-const basicStoud = require('../stubs/basicCharacterStdout')
-const complexStub = require('../stubs/complexCharacterResponse.json')
-const complexStoud = require('../stubs/complexCharacterStdout')
-const minifiedStoud = require('../stubs/minifiedCharacterStdout')
+const basicStub = require('../../../test/stubs/basicCharacterResponse.json')
+const basicStoud = require('../../../test/stubs/basicCharacterStdout')
+const complexStub = require('../../../test/stubs/complexCharacterResponse.json')
+const complexStoud = require('../../../test/stubs/complexCharacterStdout')
+const minifiedStoud = require('../../../test/stubs/minifiedCharacterStdout')
 
 describe('@tibia-suite/cli character', () => {
   test
