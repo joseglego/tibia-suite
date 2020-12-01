@@ -28,6 +28,6 @@
     "url": "https://github.com/joseglego/tibia-suite/issues"
   },
   "dependencies": {
-    "@tibia-suite/scraper": "^0.1.6"
+    "@tibia-suite/scraper": "^1.1.1"
   }
 }
