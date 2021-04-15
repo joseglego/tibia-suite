@@ -1,21 +1,21 @@
-const scraper = require('@tibia-suite/scraper');
-const response = require('./utils/response');
+const scraper = require('@tibia-suite/scraper')
+const response = require('./utils/response')
 
 exports.handler = async ({ path, queryStringParameters }) => {
-  const name = path.split('/')[3] || queryStringParameters.name;
+  const name = path.split('/')[3] || queryStringParameters.name
 
   if (name) {
-    let world;
+    let world
     try {
-      world = await scraper.getWorld(name);
-    } catch(err) {
-      return response.notFound();
+      world = await scraper.getWorld(name)
+    } catch (err) {
+      return response.notFound()
     }
 
-    return response.json(world);
+    return response.json(world)
   } else {
-    const worlds = await scraper.getWorlds();
+    const worlds = await scraper.getWorlds()
 
-    return response.json(worlds);
+    return response.json(worlds)
   }
-};
+}
