@@ -11,9 +11,9 @@ I haven't play during last years. So, if you think I'm missing something or I sh
 ## Components
 - [Scraper](packages/scraper/README.md) [![Version](https://img.shields.io/npm/v/@tibia-suite/scraper.svg)](https://npmjs.org/package/@tibia-suite/scraper) | [Project](https://github.com/joseglego/tibia-suite/projects/1)
 - [CLI](packages/cli/README.md) [![Version](https://img.shields.io/npm/v/@tibia-suite/cli.svg)](https://npmjs.org/package/@tibia-suite/cli) | [Project](https://github.com/joseglego/tibia-suite/projects/3)
+- APIs ([Serverless](packages/serverless/README.md), and others)
 - Google Extension
 - Alfred Workflow
-- APIs (1 with serverless, and others)
 - Webpages (A PWA, and others)
 - React Native
 - Telegram Bot
